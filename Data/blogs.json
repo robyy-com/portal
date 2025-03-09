@@ -1,0 +1,52 @@
+{
+  "blogsData": [
+    {
+      "id": "1",
+      "authorName": "Emma Green",
+      "title": "How to Choose the Best Security Cameras for Your Home",
+      "description": "Not all security cameras are created equal. This guide will help you select the best cameras for home protection based on your needs.",
+      "image": "https://images.pexels.com/photos/1556716/pexels-photo-1556716.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "date": "2024-08-30"
+    },
+    {
+      "id": "2",
+      "authorName": "John Doe",
+      "title": "Top 5 Security Solutions for Your Business",
+      "description": "In today's world, ensuring the safety of your business is paramount. Here are five security solutions that can protect your assets effectively.",
+      "image": "https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "date": "2024-10-01"
+    },
+    {
+      "id": "3",
+      "authorName": "Jane Smith",
+      "title": "Understanding Executive Protection Services",
+      "description": "Executive protection is crucial for high-profile individuals. Learn about the best practices and services available to safeguard them.",
+      "image": "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "date": "2024-09-25"
+    },
+    {
+      "id": "4",
+      "authorName": "Alice Johnson",
+      "title": "Why Cybersecurity is Essential for Every Company",
+      "description": "Cybersecurity is a top priority for modern businesses. This blog explores why every company should invest in solid cyber defenses.",
+      "image": "https://images.pexels.com/videos/6194051/african-african-american-business-businessman-6194051.jpeg?auto=compress&cs=tinysrgb&h=226.525&fit=crop&w=253.17499999999998&dpr=1",
+      "date": "2024-09-18"
+    },
+    {
+      "id": "5",
+      "authorName": "Bob Williams",
+      "title": "Enhancing Home Security: Tips and Tricks",
+      "description": "Want to make your home more secure? This article covers the best tips and tricks to improve your home’s security system.",
+      "image": "https://images.pexels.com/photos/1586996/pexels-photo-1586996.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "date": "2024-09-10"
+    },
+    {
+      "id": "6",
+      "authorName": "Charlie Brown",
+      "title": "The Importance of Event Security Management",
+      "description": "Managing event security requires careful planning and execution. Learn how to secure your event and ensure a smooth experience.",
+      "image": "https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "date": "2024-09-05"
+    }
+  ]
+}
