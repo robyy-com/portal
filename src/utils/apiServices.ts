@@ -1,4 +1,5 @@
-export const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+export const apiUrl =
+  process.env.API_BASE_URL || "https://api-robyy.s3bd.com/v1.1.0";
 
 // Fetch Products
 export const fetchProducts = async () => {
