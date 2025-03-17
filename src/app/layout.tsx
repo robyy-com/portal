@@ -7,6 +7,7 @@ import Providers from "./providers";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Roboto } from "next/font/google";
+import ChatButton from "@/components/ChatButton";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Add desired font weights
 
@@ -35,7 +36,7 @@ export default function RootLayout({
           <div className="px-2.5 xl:px-0 min-h-[calc(75vh-220px)]">
             {children}
           </div>
-
+          <ChatButton />
           <Footer />
         </Providers>
       </body>

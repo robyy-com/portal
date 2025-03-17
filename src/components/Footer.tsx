@@ -2,11 +2,12 @@ import { FaApple } from "react-icons/fa";
 import { FaMusic } from "react-icons/fa6";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import SocialShare from "./SocialShare";
+import CopyRight from "./CopyRight";
 
 const Footer = () => {
   return (
-    <div className="bg-[#000000] text-white px-3">
-      <div className="container mx-auto">
+    <div className="bg-[#000000] text-white ">
+      <div className="container mx-auto px-3">
         <div className="grid grid-cols-4 gap-3 lg:grid-cols-12 lg:gap-4 py-10">
           <div className="col-span-4 items-center ">
             <div className="mb-5">
@@ -110,6 +111,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <CopyRight />
     </div>
   );
 };
