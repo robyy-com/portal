@@ -61,8 +61,8 @@ function Details(product: Product) {
         <Image
           src={selectImg || proimg}
           alt="product"
-          width={200}
-          height={200}
+          width={700}
+          height={700}
           className="w-full rounded-xl transition-all duration-500 ease-in-out transform hover:scale-105"
         />
         {images && images?.length > 0 && (

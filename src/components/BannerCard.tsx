@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BannerType } from "@/types/types";
 function BannerCard({ imgSource, navigateURL, altText }: BannerType) {
   return (
-    <div className=" rounded-xl">
+    <div className="rounded-xl py-4">
       <div className="h-[300px] lg:h-[450px] relative">
         <Image
           src={imgSource}

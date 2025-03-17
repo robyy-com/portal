@@ -27,14 +27,7 @@ function ContactPage() {
             </div>
           </div>
         </div>
-        <address className=" ">
-          <iframe
-            className=" w-full h-[200px] lg:h-[600px] rounded-2xl"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29190.049895646385!2d90.34211314660593!3d23.862788246240765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c3716f4bc2d5%3A0xf38da557327be0ea!2sDhaka%20Metro%20Rail%2C%20Depot%2C%20Diabari!5e0!3m2!1sen!2sbd!4v1718732280889!5m2!1sen!2sbd"
-            allowFullScreen={true}
-            loading="lazy"
-          ></iframe>
-        </address>
+
         <main className=" mt-10  flex lg:px-[100px] items-center justify-center">
           <ContactForm />
         </main>

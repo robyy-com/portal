@@ -123,7 +123,7 @@ const ContactForm = () => {
               STORE ADDRESS
             </h2>
             <p className=" text-sm font-normal text-secondaryColor">
-              4/14, G-1, Section-2, Dhaka-1216
+              Korbona, Kalu Mistrir Mor, Rajshashi.
             </p>
           </div>
           <div className=" border-b  border-borderColor py-2 lg:py-4">
@@ -131,7 +131,7 @@ const ContactForm = () => {
               HOTLINE
             </h2>
             <p className=" text-sm font-normal text-secondaryColor">
-              +8801836903940
+              +8801960710948
             </p>
           </div>
           <div className="border-b  border-borderColor py-2 lg:py-4">
@@ -139,7 +139,7 @@ const ContactForm = () => {
               EMAIL US
             </h2>
             <p className=" text-sm font-normal text-secondaryColor">
-              info.kalam.me@gmail.com
+              info@robyy.com
             </p>
           </div>
           <div className=" pt-2 lg:pt-4">
@@ -147,7 +147,7 @@ const ContactForm = () => {
               SERVICE TIME
             </h2>
             <p className=" text-sm font-normal text-secondaryColor">
-              24-hour (Saturday - Friday)
+              Always Open
             </p>
           </div>
         </div>

@@ -103,7 +103,7 @@ const Footer = () => {
                 <FaMusic className="mr-3 text-[30px]" />
                 <div className="flex flex-col text-base mr-10">
                   <p>Have any question?</p>
-                  <span>+160166585987</span>
+                  <span>+8801960710948</span>
                 </div>
               </div>
             </div>

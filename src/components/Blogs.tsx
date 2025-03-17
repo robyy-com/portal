@@ -61,8 +61,8 @@ const Blogs = async () => {
               <Image
                 className="object-cover w-full h-48"
                 src={blogItem?.thumbImg}
-                width={400}
-                height={400}
+                width={700}
+                height={700}
                 alt="missing image"
               />
               <div className="p-4 flex flex-col  h-full">

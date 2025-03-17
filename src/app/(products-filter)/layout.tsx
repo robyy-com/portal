@@ -24,7 +24,7 @@ export default function ProductLayout({ children }: { children: ReactNode }) {
                 : path?.split("/")[2].toUpperCase()}
             </h2>
             <div className="flex gap-4 justify-end items-center">
-              <FilterRightHeader />
+              {/* <FilterRightHeader /> */}
 
               <FaFilter
                 onClick={() => setOpenDrawer(true)}

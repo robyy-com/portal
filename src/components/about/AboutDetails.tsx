@@ -3,103 +3,96 @@ function AboutDetails() {
     <div>
       <div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Welcome to ROBYY!
-          </h2>
+          <h2 className="text-xl text-textColor font-bold">পরিচিতিঃ</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            Welcome to ROBYY, your premier destination for exquisite jewelry
-            that combines timeless elegance with contemporary flair. Founded
-            with a passion for beauty and a dedication to quality, ROBYY has
-            become a trusted name in the world of jewelry, celebrated for our
-            meticulous craftsmanship and innovative designs.
+            {"রবি"} অনলাইন শপে আপনাকে স্বাগতম। এখানে আপনি উন্নতমানের কসমেটিকস ও
+            স্কিন কেয়ার পণ্য খুচরা মূল্যে ক্রয় করতে পারবেন। {"রবি"} সারাদেশে সকল
+            ধরনের কসমেটিকস ও স্কিন কেয়ার পণ্য খুচরা মূল্যে সরবরাহ করে থাকে।
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Elevate Your Decor
-          </h2>
+          <h2 className="text-xl text-textColor font-bold">গোপনীয়তাঃ</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            Whether adorning your mantelpiece, gracing your coffee table, or
-            enhancing your office desk, the Radiant Luxe Aura embodies timeless
-            beauty and refined taste. Its captivating presence invites
-            admiration and evokes a sense of wonder, making it a captivating
-            conversation piece for guests and a cherished heirloom for
-            generations to come.
+            {"রবি"} এর সকল গ্রাহকের তথ্য নিজেদের ডাটাবেইজে রেখে থাকে এবং এই তথ্য
+            কারও সাথে শেয়ার করা হয়না।
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Our Story
-          </h2>
+          <h2 className="text-xl text-textColor font-bold">প্রয়োজনীয় তথ্যঃ</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            At ROBYY, we believe that every piece of jewelry tells a story, and
-            our journey began with a simple yet profound vision: to create
-            jewelry that resonates with individuality and captures the essence
-            of personal style. Our founders, driven by a love for art and
-            design, set out to craft collections that reflect the unique spirit
-            of each wearer. From our humble beginnings to becoming a beloved
-            brand, our commitment to excellence has remained unwavering.
+            {"রবি"} এ অর্ডার করার জন্য গ্রাহক থেকে নিম্নে দেয়া তথ্য নেয়া হয়ে
+            থাকে-
+            <br />
+            √গ্রাহকের নাম <br /> √গ্রাহকের মোবাইল নম্বর <br /> √গ্রাহকের ঠিকানা
           </p>
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Our Craftsmanship
+          <h2 className="text-xl  text-textColor font-bold">
+            ডেলিভারি সময়সীমাঃ
           </h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            Each piece of ROBYY jewelry is a testament to our artisans skill and
-            dedication. We source only the finest materials, ensuring that every
-            item in our collection meets the highest standards of quality. Our
-            designs are brought to life through a blend of traditional
-            techniques and modern innovation, resulting in jewelry that is both
-            timeless and trendsetting.
+            রবি এর স্টকে থাকা সকল পণ্য দ্রুত সময়ের মধ্যে ডেলিভারি দেওয়া হয়।
+            সেক্ষেত্রে ঢাকার মধ্যে ২ কর্মদিবস এবং অন্যান্য জেলায় ৩/৫ কর্মদিবস এর
+            মধ্যে ডেলিভারি সম্পন্ন করা হয়।
           </p>
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Our Collections
-          </h2>
+          <h2 className="text-xl text-textColor font-bold">পেমেন্ট পক্রিয়াঃ</h2>
           <p className="mt-2 lg:mt-5 text-base  lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            Whether you are seeking a statement piece for a special occasion or
-            an everyday accessory that exudes elegance, ROBYY offers a diverse
-            range of collections to suit every taste. From classic diamond
-            earrings and sophisticated necklaces to contemporary rings and chic
-            bracelets, our collections are designed to inspire and delight.
-            Explore our curated selections and discover the perfect piece that
-            reflects your unique style.
+            গ্রাহক ক্যাশ অন ডেলিভারি কিংবা অগ্রীম পেমেন্টের মাধ্যমে অর্ডার করতে
+            পারবেন। ঢাকার মধ্যে ডেলিভারি চার্জ ৬০ টাকা এবং অন্যান্য জেলায় হোম
+            ডেলিভারি চার্জ ১২০ টাকা।
           </p>
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Our Commitment
-          </h2>
+          <h2 className="text-xl  text-textColor font-bold">রিটার্ন পলিসিঃ</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            At ROBYY, we are more than just a jewelry brand; we are a community
-            built on trust and integrity. We are committed to providing our
-            customers with an exceptional shopping experience, from the moment
-            you visit our site to the moment your jewelry arrives at your
-            doorstep. Our customer service team is dedicated to assisting you
-            with any inquiries and ensuring your satisfaction with every
-            purchase.
+            যে ক্ষেত্রে গ্রাহক পণ্য রিটার্ণ করতে পারবে যদিঃ <br />
+            √রবি থেকে ভুল পণ্য ডেলিভারি করা হলে। <br />
+            √রবি থেকে ভুল শেইড ডেলিভারি করা হলে। <br />
+            √অবশ্যই ডেলিভারি ম্যানের সামনে পণ্য চেক করে নিতে হবে (অন্যথায় অভিযোগ
+            গ্রহণযোগ্য হবে না)। <br />
+            √অভিযোগ বা এক্সচেঞ্জ অবশ্যই সর্বোচ্চ তিন কর্মদিবসের মধ্যে করতে
+            হবে,অন্যথায় অভিযোগ বা এক্সচেঞ্জ গ্রহণযোগ্য হবে না।
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
-            Sustainability and Ethics
-          </h2>
+          <h2 className="text-xl text-textColor font-bold">এক্সচেঞ্জ পলিসিঃ</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
-            We believe in responsible luxury and are committed to sustainable
-            practices that protect our planet and support fair labor. Our
-            materials are ethically sourced, and we work with suppliers who
-            share our values of environmental stewardship and social
-            responsibility.
+            প্রোডাক্ট ব্যবহৃত হলে এক্সচেঞ্জ আবেদন করতে পারবেন না এবং পণ্য অক্ষত
+            রাখলে সেই ক্ষেত্রে গ্রাহক এক্সচেঞ্জ আবেদন করতে পারবেন। ভুল পণ্য
+            অর্ডার করলে এক্সচেঞ্জ আবেদন করার জন্য ডেলিভারি চার্জ গ্রাহককে বহন
+            করতে হবে।
           </p>
+        </div>
+
+        <div className="mb-7  lg:mb-12">
+          <h2 className="text-xl text-textColor font-bold">রিফান্ড পলিসিঃ</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">
+            √সঠিক পণ্য ডেলিভারি হবার পর রিফান্ড আবেদন গ্রহণযোগ্য নয়। <br />
+            √অনুমোদিত রিফান্ড ৩ কর্মদিবসের মধ্যে সম্পন্ন করা হবে। <br />
+            √অর্ডার দেওয়ার জন্য ব্যবহৃত একই পেমেন্ট পদ্ধতির মাধ্যমে অর্থ ফেরত
+            দেওয়া হবে।
+          </p>
+        </div>
+
+        <div className="mb-7  lg:mb-12">
+          <h2 className="text-lg text-textColor font-bold">
+            Phone: +8801960710948
+          </h2>
+          <h2 className="text-lg text-textColor font-bold">
+            Email: info@robyy.com
+          </h2>
+          <h2 className="text-lg text-textColor font-bold">
+            Address: Korbona, Kalu Mistrir Mor, Rajshashi.
+          </h2>
         </div>
 
         <div className="mb-7 lg:mb-12">
-          <h2 className="text-xl lg:text-2xl text-textColor font-bold">
+          <h2 className="text-xl text-textColor font-bold">
             Join the ROBYY Family
           </h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-fivthtextColor leading-[34px]">

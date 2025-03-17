@@ -196,7 +196,6 @@ input[type="checkbox"]:checked {
 }
 
 .slick-slide {
-  padding: 20px 10px;
   background-color: transparent;
 }
 
@@ -214,15 +213,17 @@ input[type="checkbox"]:checked {
 .slick-dots li button:before {
   font-size: 15px !important;
 }
-@media screen and (max-width: 768px) {
-  .banner-slide .slick-next {
-    right: 25px;
-  }
 
-  .banner-slide .slick-prev {
-    left: 20px;
-    z-index: 10;
-  }
+.banner-slide .slick-next {
+  right: 30px;
+}
+
+.banner-slide .slick-prev {
+  left: 30px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
   .category-slide .slick-next {
     right: 25px;
   }

@@ -12,8 +12,7 @@ const Newsletter = () => {
               Sign Up for Newsletter
             </h4>
             <p className=" md:text-base text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Signup our newsletter to get the latest news and updates.
             </p>
           </div>
         </div>

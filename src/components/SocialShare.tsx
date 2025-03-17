@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import {
   FaFacebookF,
@@ -5,6 +6,7 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 
 interface props {
   hover: boolean;
@@ -13,35 +15,55 @@ interface props {
 function SocialShare({ hover }: props) {
   return (
     <div className=" justify-center lg:justify-start flex gap-2 xl:gap-3 ">
-      <button
+      <Link
+        href="https://www.linkedin.com/in/robyy-i-758713291"
+        target="_blank"
         className={`${
           hover && "hover:bg-white hover:text-primaryColorHover"
         }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
       >
         <FaLinkedinIn size={20} />
-      </button>
-      <button
+      </Link>
+      <Link
+        href="#"
+        target="_blank"
         className={`${
           hover && "hover:bg-white hover:text-primaryColorHover"
         }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
       >
         <FaTwitter size={20} />
-      </button>
-      <button
+      </Link>
+      <Link
+        href="https://www.facebook.com/share/15onWZRzDV/?mibextid=qi2Omg"
+        target="_blank"
         className={`${
           hover && "hover:bg-white hover:text-primaryColorHover"
         }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
       >
         <FaFacebookF size={20} />
-      </button>
-      <button
+      </Link>
+
+      <Link
+        href="https://youtube.com/@robyy1837?si=K5nc6nRHfh3EM9uB"
+        target="_blank"
+        className={`${
+          hover && "hover:bg-white hover:text-primaryColorHover"
+        }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
+      >
+        <FaYoutube size={20} />
+      </Link>
+      <Link
+        href="https://wa.me/01960710948?text=Query us"
+        target="_blank"
         className={`${
           hover && "hover:bg-white  hover:text-primaryColorHover"
         }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
       >
         <FaWhatsapp size={20} />
-      </button>
-      <button
+      </Link>
+      <Link
+        href=" https://www.instagram.com/robyycosmetics?igsh=MTI3cnNxam0xd2hiNA=="
+        target="_blank"
         className={`${
           hover && "hover:bg-white  hover:text-primaryColorHover"
         }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
@@ -62,7 +84,7 @@ function SocialShare({ hover }: props) {
             />
           </svg>
         )}
-      </button>
+      </Link>
     </div>
   );
 }

@@ -16,8 +16,8 @@ export default function AddsItem({
           src={imgSource}
           alt={altText}
           className="w-full"
-          width={700}
-          height={100}
+          width={1200}
+          height={400}
           objectFit="cover"
         />
       </Link>

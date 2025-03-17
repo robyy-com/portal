@@ -12,7 +12,7 @@ const Banner = () => {
   var settings = {
     dots: true,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
