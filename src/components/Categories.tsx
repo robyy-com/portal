@@ -90,7 +90,7 @@ const Categories = () => {
       <SliderComponent {...settings} className="category-slide">
         {data &&
           data?.map((item: Category, index: number) => (
-            <Link href="/products" key={index}>
+            <Link href={`/category/${item.categorySlug}`} key={index}>
               <div key={index} className=" px-3">
                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col justify-center items-center pb-4">
                   <div className="w-full">

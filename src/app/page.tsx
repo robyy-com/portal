@@ -5,11 +5,8 @@ import BestDeals from "@/components/BestDeals";
 import Blogs from "@/components/Blogs";
 import Categories from "@/components/Categories";
 import Collection from "@/components/Collection";
-import FlashSale from "@/components/FlashSale";
 import NewArrivals from "@/components/NewArrivals";
-import Newsletter from "@/components/Newsletter";
 import Support from "@/components/Support";
-import TopTen from "@/components/TopTen";
 import TrendingProducts from "@/components/TrendingProducts";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -50,9 +47,7 @@ export default function Home() {
           <TopTen />
         </div> */}
 
-        <div className=" mt-5 py-10">
-          <FlashSale />
-        </div>
+        <div className=" mt-5 py-10">{/* <FlashSale /> */}</div>
         {/* <div className=" mt-5">
           <HotOffer />
         </div> */}
@@ -63,7 +58,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   );
 }

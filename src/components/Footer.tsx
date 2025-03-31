@@ -1,10 +1,12 @@
-import { FaApple } from "react-icons/fa";
+import { Category } from "@/types/types";
+import { fetchCategories } from "@/utils/apiServices";
+import Link from "next/link";
 import { FaMusic } from "react-icons/fa6";
-import { IoLogoGooglePlaystore } from "react-icons/io5";
-import SocialShare from "./SocialShare";
 import CopyRight from "./CopyRight";
+import SocialShare from "./SocialShare";
 
-const Footer = () => {
+const Footer = async () => {
+  const category: Category = await fetchCategories();
   return (
     <div className="bg-[#000000] text-white ">
       <div className="container mx-auto px-3">
@@ -26,71 +28,50 @@ const Footer = () => {
           <div className="col-span-2 lg:mt-0 lg:m-0 m-auto mt-6 items-center">
             QUICK LINKS
             <div className="flex flex-col mt-3 ">
-              <a
-                href="#"
+              <Link
+                href="/about"
                 className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
               >
                 About Us
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/contact"
                 className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
               >
                 Contact Us
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/products"
                 className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
               >
                 All Products
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/category"
                 className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
               >
-                Login
-              </a>
-              <a
-                href="#"
+                All Category
+              </Link>
+              <Link
+                href="/brand"
                 className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
               >
-                Sing Up
-              </a>
+                All Brand
+              </Link>
             </div>
           </div>
           <div className="col-span-2 lg:mt-0 mt-6 lg:m-0  m-auto items-center ">
             CUSTOMER AREA
             <div className="flex flex-col mt-3">
-              <a
-                href="#"
-                className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
-              >
-                About Us
-              </a>
-              <a
-                href="#"
-                className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
-              >
-                Contact Us
-              </a>
-              <a
-                href="#"
-                className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
-              >
-                All Products
-              </a>
-              <a
-                href="#"
-                className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
-              >
-                Login
-              </a>
-              <a
-                href="#"
-                className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
-              >
-                Sing Up
-              </a>
+              {category?.slice(0, 5)?.map((category: any) => (
+                <Link
+                  href={`/category/${category.categorySlug}`}
+                  key={category.id}
+                  className="textColor hover:textColor  py-2 rounded-md text-sm font-medium capitalize	"
+                >
+                  {category?.categoryName}
+                </Link>
+              ))}
             </div>
           </div>
 
