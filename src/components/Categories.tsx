@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Slider from "react-slick";
-import catagory from "../../public/images/Caregories/img3-middle.png";
+import catagory from "../../public/images/noImage/category_no_image.jpg";
 import SectionTitle from "./SectionTitle";
 import Button from "./ui/Button";
 

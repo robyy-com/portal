@@ -6,7 +6,8 @@ import CopyRight from "./CopyRight";
 import SocialShare from "./SocialShare";
 
 const Footer = async () => {
-  const category: Category = await fetchCategories();
+  const categories: Category[] = await fetchCategories(); // Ensure it's an array
+  const fiveCategory = categories.slice(0, 5);
   return (
     <div className="bg-[#000000] text-white ">
       <div className="container mx-auto px-3">
@@ -63,7 +64,7 @@ const Footer = async () => {
           <div className="col-span-2 lg:mt-0 mt-6 lg:m-0  m-auto items-center ">
             CUSTOMER AREA
             <div className="flex flex-col mt-3">
-              {category?.slice(0, 5)?.map((category: any) => (
+              {fiveCategory?.map((category: any) => (
                 <Link
                   href={`/category/${category.categorySlug}`}
                   key={category.id}

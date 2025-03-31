@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MdOutlineStarPurple500 } from "react-icons/md";
-import products from "../../public/images/BestDeals/productsImge.png";
+import products from "../../public/images/noImage/best_deals_no_image.jpg";
 const BestDeals = () => {
   // Create an array with 10 elements (all undefined)
   const items = Array(10).fill(null);

@@ -1,8 +1,8 @@
 import { fetchBlogs } from "@/utils/apiServices";
 import Image from "next/image";
 import Link from "next/link";
+import blogImage from "../../public/images/noImage/blog_no_image.jpg";
 import Button from "./ui/Button";
-
 const Blogs = async () => {
   // const settings = {
   //   dots: true,
@@ -60,7 +60,7 @@ const Blogs = async () => {
             >
               <Image
                 className="object-cover w-full h-48"
-                src={blogItem?.thumbImg}
+                src={blogItem?.thumbImg || blogImage}
                 width={700}
                 height={700}
                 alt="missing image"

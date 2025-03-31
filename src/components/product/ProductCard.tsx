@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
-import productImage from "../../../public/images/Products iamge/product-13 1 (1).png";
+import productImage from "../../../public/images/noImage/product_no_image.jpg";
 import WishlistButton from "../wishlist/WishlistButton";
 import AddToCart from "./AddToCart";
 
