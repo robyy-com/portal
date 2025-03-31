@@ -119,47 +119,47 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-3">
         <div className="xl:pr-[100px]">
           <div className=" border-b  border-borderColor  pb-2 lg:pb-4">
-            <h2 className="lg:text-xl text-regular  font-medium text-primaryColor lg:mb-2">
+            <h2 className="lg:text-xl text-regular  font-medium text-white lg:mb-2">
               STORE ADDRESS
             </h2>
-            <p className=" text-sm font-normal text-secondaryColor">
+            <p className=" text-sm font-normal text-secondaryColorHover">
               Korbona, Kalu Mistrir Mor, Rajshashi.
             </p>
           </div>
           <div className=" border-b  border-borderColor py-2 lg:py-4">
-            <h2 className="lg:text-xl text-regular  font-medium text-primaryColor mb-2">
+            <h2 className="lg:text-xl text-regular  font-medium text-white mb-2">
               HOTLINE
             </h2>
-            <p className=" text-sm font-normal text-secondaryColor">
+            <p className=" text-sm font-normal text-secondaryColorHover">
               +8801960710948
             </p>
           </div>
           <div className="border-b  border-borderColor py-2 lg:py-4">
-            <h2 className="lg:text-xl text-regular  font-medium text-primaryColor mb-2">
+            <h2 className="lg:text-xl text-regular  font-medium text-white mb-2">
               EMAIL US
             </h2>
-            <p className=" text-sm font-normal text-secondaryColor">
+            <p className=" text-sm font-normal text-secondaryColorHover">
               info@robyy.com
             </p>
           </div>
           <div className=" pt-2 lg:pt-4">
-            <h2 className="lg:text-xl text-regular  font-medium text-primaryColor mb-2">
+            <h2 className="lg:text-xl text-regular  font-medium text-white mb-2">
               SERVICE TIME
             </h2>
-            <p className=" text-sm font-normal text-secondaryColor">
+            <p className=" text-sm font-normal text-secondaryColorHover">
               Always Open
             </p>
           </div>
         </div>
         <div className="md:col-span-2">
-          <h2 className="lg:text-[26px] text-xl font-semibold text-textColor mb-6">
+          <h2 className="lg:text-[26px] text-xl font-semibold text-white mb-6">
             GET IN TOUCH
           </h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-4">
               <div>
                 <label
-                  className="block text-base text-textColor mb-1 font-medium"
+                  className="block text-base text-white mb-1 font-medium"
                   htmlFor="email"
                 >
                   Email <span className="text-red-600">*</span>
@@ -176,7 +176,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <label
-                  className="block text-base text-textColor mb-1 font-medium"
+                  className="block text-base text-white mb-1 font-medium"
                   htmlFor="phone"
                 >
                   Phone Number <span className="text-red-600">*</span>
@@ -192,7 +192,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <label
-                  className="block mb-1 text-base text-textColor font-medium"
+                  className="block mb-1 text-base text-white font-medium"
                   htmlFor="name"
                 >
                   Name <span className="text-red-600">*</span>
@@ -209,7 +209,7 @@ const ContactForm = () => {
             </div>
             <div>
               <label
-                className="block mb-1 text-base text-textColor font-medium"
+                className="block mb-1 text-base text-white font-medium"
                 htmlFor="message"
               >
                 Message <span className="text-red-600">*</span>
@@ -232,7 +232,7 @@ const ContactForm = () => {
                   checked={agree}
                   onChange={(e) => setAgree(e.target.checked)}
                 />
-                <label className="ml-2" htmlFor="agree">
+                <label className="ml-2 text-white" htmlFor="agree">
                   I have read and agree to the terms
                 </label>
                 {errors.agree && <p className="text-red-600">{errors.agree}</p>}

@@ -2,7 +2,7 @@ import { fatchTopBrand } from "@/utils/apiServices";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
-
+import brandImage from "../../../public/images/noImage/top_brand_no_image.jpg";
 async function TopBrandPage() {
   const topBrand: any = await fatchTopBrand();
 
@@ -23,14 +23,16 @@ async function TopBrandPage() {
                   className=" flex justify-center items-center w-full col-span-1 border border-primaryColor hover:scale-105 transition-all"
                 >
                   <Link href={`/brand/${brand.brandSlug}`}>
-                    <Image
-                      src={brand?.brandImg}
-                      alt={brand?.brandName}
-                      width={150} // Set a fixed width based on grid needs
-                      height={60} // Set a fixed height based on grid needs
-                      objectFit="cover"
-                      className=""
-                    />
+                    <div className="">
+                      <Image
+                        src={brand?.brandImg || brandImage}
+                        alt={brand?.brandName}
+                        width={150} // Set a fixed width based on grid needs
+                        height={60} // Set a fixed height based on grid needs
+                        objectFit="cover"
+                        className=""
+                      />
+                    </div>
                   </Link>
                 </li>
               ))

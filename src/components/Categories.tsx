@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Slider from "react-slick";
-import catagory from "../../public/images/Caregories/img3-middle.png";
+import catagory from "../../public/images/noImage/category_no_image.jpg";
 import SectionTitle from "./SectionTitle";
 import Button from "./ui/Button";
 
@@ -90,7 +90,7 @@ const Categories = () => {
       <SliderComponent {...settings} className="category-slide">
         {data &&
           data?.map((item: Category, index: number) => (
-            <Link href="/products" key={index}>
+            <Link href={`/category/${item.categorySlug}`} key={index}>
               <div key={index} className=" px-3">
                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col justify-center items-center pb-4">
                   <div className="w-full">

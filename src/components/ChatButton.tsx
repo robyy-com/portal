@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import {
-  FaFacebookMessenger,
-  FaWhatsapp,
   FaComments,
+  FaFacebookMessenger,
   FaTimes,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function ChatButton() {
@@ -23,7 +23,7 @@ export default function ChatButton() {
         }`}
       >
         <a
-          href="https://wa.me/01960710948"
+          href="https://wa.me/+8801960710948"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition"
