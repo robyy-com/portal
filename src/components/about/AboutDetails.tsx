@@ -7,10 +7,23 @@ function AboutDetails() {
         <div className="mb-7  lg:mb-12">
           <h2 className="text-xl text-white font-bold"> Acquaintance:</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            A warm welcome to “ROBYY.com” online shop. Here, you can purchase
-            high-quality cosmetics and skincare products at retail prices.
-            “ROBYY.com” online shop supplies all types of cosmetics and skincare
-            products at retail prices all over the country.
+            A warm welcome to{" "}
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            online shop. Here, you can purchase high-quality cosmetics and
+            skincare products at retail prices.
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            online shop supplies all types of cosmetics and skincare products at
+            retail prices all over the country.
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
