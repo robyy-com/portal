@@ -39,9 +39,9 @@ function AboutDetails() {
               “ROBYY.com”
             </Link>{" "}
             the following information is collected from the customer: <br />
-            Customer's name. <br />
-            Customer's mobile number. <br />
-            Customer's address.
+            {` Customer's`} name. <br />
+            {` Customer's`} mobile number. <br />
+            {` Customer's`} address.
           </p>
         </div>
 
