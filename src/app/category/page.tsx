@@ -3,7 +3,7 @@ import { fetchCategories } from "@/utils/apiServices";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
-import catagory from "../../../public/images/Caregories/img3-middle.png";
+import catagory from "../../../public/images/noImage/category_no_image.jpg";
 async function CategoryPage() {
   const categories: Category[] = await fetchCategories();
 

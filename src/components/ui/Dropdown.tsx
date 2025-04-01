@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import productImage from "../../../public/images/noImage/product_no_image.jpg";
 interface props {
   searchproducts: any;
   onSelect: () => void;
@@ -20,7 +20,7 @@ export default function Dropdown({ searchproducts, onSelect }: props) {
               <li className="flex items-center gap-4 mb-4 cursor-pointer hover:bg-slate-100">
                 <div className="w-16">
                   <Image
-                    src="/images/Products iamge/productdetails.jpg"
+                    src={product?.proImage || productImage}
                     alt="product"
                     className=" rounded-lg"
                     width={100}
