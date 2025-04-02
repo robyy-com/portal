@@ -1,18 +1,18 @@
+import ChatButton from "@/components/ChatButton";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNavbar from "@/components/TopNavbar";
 import type { Metadata } from "next";
-import "./globals.css";
-import Providers from "./providers";
+import { Roboto } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Roboto } from "next/font/google";
-import ChatButton from "@/components/ChatButton";
+import "./globals.css";
+import Providers from "./providers";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Add desired font weights
 
 export const metadata: Metadata = {
-  title: "Robyy Jewelry",
+  title: "Robyy",
   description: "Family Jewelry Collection",
 };
 

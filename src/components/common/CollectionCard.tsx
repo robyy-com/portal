@@ -13,8 +13,8 @@ function CollectionCard({ brand }: any) {
           alt="Flower and sky"
         />
 
-        <div className="absolute top-4 lg:top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 px-6 lg:py-[40px] 2xl:py-[100px]">
-          <button className="bg-[#343434] text-sm lg:text-base xl:text-lg py-1 px-4 xl:py-3 xl:px-8 text-white rounded-md uppercase">
+        <div className="absolute bottom-6  left-8  ">
+          <button className="text-lg xl:text-xl  px-4 font-bold   text-primaryColor rounded-md uppercase">
             Explore
           </button>
         </div>

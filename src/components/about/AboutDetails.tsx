@@ -1,79 +1,137 @@
+import Link from "next/link";
+
 function AboutDetails() {
   return (
     <div>
       <div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">পরিচিতিঃ</h2>
+          <h2 className="text-xl text-white font-bold"> Acquaintance:</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            {"রবি"} অনলাইন শপে আপনাকে স্বাগতম। এখানে আপনি উন্নতমানের কসমেটিকস ও
-            স্কিন কেয়ার পণ্য খুচরা মূল্যে ক্রয় করতে পারবেন। {"রবি"} সারাদেশে সকল
-            ধরনের কসমেটিকস ও স্কিন কেয়ার পণ্য খুচরা মূল্যে সরবরাহ করে থাকে।
+            A warm welcome to{" "}
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            online shop. Here, you can purchase high-quality cosmetics and
+            skincare products at retail prices.
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            online shop supplies all types of cosmetics and skincare products at
+            retail prices all over the country.
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">গোপনীয়তাঃ</h2>
+          <h2 className="text-xl text-white font-bold"> Privacy:</h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            {"রবি"} এর সকল গ্রাহকের তথ্য নিজেদের ডাটাবেইজে রেখে থাকে এবং এই তথ্য
-            কারও সাথে শেয়ার করা হয়না।
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            stores all the information of the customers in its own database and
+            does not share this information with anyone.
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">প্রয়োজনীয় তথ্যঃ</h2>
+          <h2 className="text-xl text-white font-bold">
+            Required Information:
+          </h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            {"রবি"} এ অর্ডার করার জন্য গ্রাহক থেকে নিম্নে দেয়া তথ্য নেয়া হয়ে
-            থাকে-
+            For placing an order with{" "}
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            the following information is collected from the customer: <br />
+            {` Customer's`} name. <br />
+            {` Customer's`} mobile number. <br />
+            {` Customer's`} address.
+          </p>
+        </div>
+
+        <div className="mb-7  lg:mb-12">
+          <h2 className="text-xl  text-white font-bold">
+            {" "}
+            Delivery Timeline:{" "}
+          </h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+            All products in stock at{" "}
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>{" "}
+            are delivered within a short time frame. For Dhaka, delivery is
+            completed within 2 working days, and for other districts, it takes 3
+            to 5 working days.
+          </p>
+        </div>
+
+        <div className="mb-7  lg:mb-12">
+          <h2 className="text-xl  text-white font-bold">Payment Process:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+            Customers can place orders either through Cash on Delivery or
+            advance payment.
+            <br /> The delivery charge within Dhaka is 60 Taka, and for other
+            districts, the home delivery charge is 120 Taka.
+          </p>
+        </div>
+        <div className="mb-7  lg:mb-12">
+          <h2 className="text-xl text-white font-bold"> Return Policy:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+            Customers can return products under the following circumstances:{" "}
             <br />
-            √গ্রাহকের নাম <br /> √গ্রাহকের মোবাইল নম্বর <br /> √গ্রাহকের ঠিকানা
+            If the wrong product is delivered by{" "}
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>
+            . <br />
+            If the wrong shade is delivered by{" "}
+            <Link
+              className=" text-white font-semibold text-lg"
+              href="https://www.robyy.com/"
+            >
+              “ROBYY.com”
+            </Link>
+            . <br />
+            The product must be checked in front of the delivery man (otherwise,
+            complaints will not be accepted). <br />
+            Complaints or exchange requests must be made within a maximum of 3
+            working days; otherwise, they will not be accepted.
           </p>
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl  text-white font-bold">ডেলিভারি সময়সীমাঃ</h2>
+          <h2 className="text-xl text-white font-bold"> Exchange Policy: </h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            রবি এর স্টকে থাকা সকল পণ্য দ্রুত সময়ের মধ্যে ডেলিভারি দেওয়া হয়।
-            সেক্ষেত্রে ঢাকার মধ্যে ২ কর্মদিবস এবং অন্যান্য জেলায় ৩/৫ কর্মদিবস এর
-            মধ্যে ডেলিভারি সম্পন্ন করা হয়।
-          </p>
-        </div>
-
-        <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">পেমেন্ট পক্রিয়াঃ</h2>
-          <p className="mt-2 lg:mt-5 text-base  lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            গ্রাহক ক্যাশ অন ডেলিভারি কিংবা অগ্রীম পেমেন্টের মাধ্যমে অর্ডার করতে
-            পারবেন। ঢাকার মধ্যে ডেলিভারি চার্জ ৬০ টাকা এবং অন্যান্য জেলায় হোম
-            ডেলিভারি চার্জ ১২০ টাকা।
-          </p>
-        </div>
-
-        <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl  text-white font-bold">রিটার্ন পলিসিঃ</h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            যে ক্ষেত্রে গ্রাহক পণ্য রিটার্ণ করতে পারবে যদিঃ <br />
-            √রবি থেকে ভুল পণ্য ডেলিভারি করা হলে। <br />
-            √রবি থেকে ভুল শেইড ডেলিভারি করা হলে। <br />
-            √অবশ্যই ডেলিভারি ম্যানের সামনে পণ্য চেক করে নিতে হবে (অন্যথায় অভিযোগ
-            গ্রহণযোগ্য হবে না)। <br />
-            √অভিযোগ বা এক্সচেঞ্জ অবশ্যই সর্বোচ্চ তিন কর্মদিবসের মধ্যে করতে
-            হবে,অন্যথায় অভিযোগ বা এক্সচেঞ্জ গ্রহণযোগ্য হবে না।
+            √ Exchange requests cannot be made if the product has been used.
+            <br />
+            √ If the product is kept intact, the customer can apply for an
+            exchange. <br />√ If the wrong product is ordered, the customer will
+            bear the delivery charge for the exchange process.
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">এক্সচেঞ্জ পলিসিঃ</h2>
+          <h2 className="text-xl text-white font-bold"> Refund Policy: </h2>
           <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            প্রোডাক্ট ব্যবহৃত হলে এক্সচেঞ্জ আবেদন করতে পারবেন না এবং পণ্য অক্ষত
-            রাখলে সেই ক্ষেত্রে গ্রাহক এক্সচেঞ্জ আবেদন করতে পারবেন। ভুল পণ্য
-            অর্ডার করলে এক্সচেঞ্জ আবেদন করার জন্য ডেলিভারি চার্জ গ্রাহককে বহন
-            করতে হবে।
-          </p>
-        </div>
-
-        <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">রিফান্ড পলিসিঃ</h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
-            √সঠিক পণ্য ডেলিভারি হবার পর রিফান্ড আবেদন গ্রহণযোগ্য নয়। <br />
-            √অনুমোদিত রিফান্ড ৩ কর্মদিবসের মধ্যে সম্পন্ন করা হবে। <br />
-            √অর্ডার দেওয়ার জন্য ব্যবহৃত একই পেমেন্ট পদ্ধতির মাধ্যমে অর্থ ফেরত
-            দেওয়া হবে।
+            Refund requests are not accepted after the delivery of the correct
+            product .<br />
+            Approved refunds will be processed within 3 working days. <br />
+            Refunds will be issued through the same payment method
+            used for the order.
           </p>
         </div>
 
