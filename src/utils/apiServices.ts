@@ -1,5 +1,5 @@
 export const apiUrl =
-  process.env.API_BASE_URL || "https://api.robyy.com/v1.1.0";
+  process.env.API_BASE_URL || "https://api.robyy.com/v1.1.0/";
 
 // Fetch Products
 export const fetchProducts = async () => {
