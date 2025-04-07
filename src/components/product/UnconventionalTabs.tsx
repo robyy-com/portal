@@ -24,7 +24,7 @@ export default function UnconventionalTabs({
       component: <Description description={description} />,
     },
     {
-      title: "Reviews (223)",
+      title: "Reviews",
       component: <Reviews reviews={reviews} />,
     },
     {
@@ -66,7 +66,7 @@ export default function UnconventionalTabs({
           {/* Tab Panels */}
           <Tab.Panels>
             {tabs.map((tab, index) => (
-              <Tab.Panel key={index} className="w-full px-8">
+              <Tab.Panel key={index} className="w-full lg:px-8 px-0">
                 {tab.component}
               </Tab.Panel>
             ))}

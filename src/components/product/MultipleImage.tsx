@@ -111,7 +111,7 @@ function MultipleImage({
                 width={100}
                 height={100}
                 onMouseOver={() => setSelectImg(img.productImageUrl)}
-                className={`w-full cursor-pointer rounded-md border border-primary mb-2 transition-opacity duration-300 ease-in-out ${
+                className={`w-full cursor-pointer rounded-md border border-primary  mb-2 transition-opacity duration-300 ease-in-out ${
                   selectImg === img.productImageUrl
                     ? "opacity-100"
                     : "opacity-60 hover:opacity-100"

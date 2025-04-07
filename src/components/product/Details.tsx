@@ -18,7 +18,6 @@ import { productDetailNoImg } from "../../../public";
 function Details(product: Product) {
   const { images, proImage } = product || {};
   const [addToCartApi] = useAddToCartMutation();
-  console.log("proImg", proImage);
 
   const dispatch = useDispatch();
   const [selectImg, setSelectImg] = useState<string>(proImage);
@@ -64,16 +63,16 @@ function Details(product: Product) {
           <Image
             src={selectImg}
             alt="product"
-            width={700}
-            height={700}
+            width={1000}
+            height={1000}
             className="w-full rounded-xl transition-all duration-500 ease-in-out transform hover:scale-105"
           />
         ) : (
           <Image
             src={productDetailNoImg}
             alt="product"
-            width={700}
-            height={700}
+            width={1000}
+            height={1000}
             className="w-full rounded-xl transition-all duration-500 ease-in-out transform hover:scale-105"
           />
         )}
@@ -90,7 +89,7 @@ function Details(product: Product) {
             </div>
           </div>
         )}
-        <div className="flex gap-4 items-center ">
+        <div className="flex gap-4 items-center flex-col lg:flex-row mb-4 md:mb-0">
           <h5 className=" text-[#121212] font-medium  text-xl mr-2 ">Share</h5>
           <SocialShare hover={true} />
         </div>

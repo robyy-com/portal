@@ -20,13 +20,13 @@ function SingleProductDetgails(product: Product) {
 
   return (
     <div>
-      <h2 className="xl:text-[26px] text-regular font-semibold mt-2 capitalize  mb-4">
+      <h2 className="xl:text-[26px] text-regular font-semibold capitalize  mb-4">
         {title}
       </h2>
-      <div className=" lg:flex lg:justify-between mb-4 items-center">
+      <div className="flex justify-between mb-4 items-center">
         <div className="flex items-center gap-4 ">
           <p className=" text-regular font-bold text-primaryColor">5.0</p>
-          <div className="flex items-center gap-1 text-sm text-[18px]  text-primaryColor">
+          <div className="flex items-center gap-1 text-sm text-[18px] text-primaryColor">
             {[...Array(5)].map((_, i) => (
               <span key={i}>
                 <FaStar />
@@ -44,7 +44,7 @@ function SingleProductDetgails(product: Product) {
           <WishlistButton product={product} label="Add to wishlist" />
         </Link>
       </div>
-      <div className=" flex justify-between items-center py-4 xl:py-8 border-b-2 border-[#EAEAEA]">
+      <div className=" flex justify-between items-center py-4 xl:py-6 border-b-2 border-[#EAEAEA]">
         <div className="flex items-baseline mb-1 space-x-2 font-roboto ">
           <p className="xl:text-4xl text-regular lg:text-xl text-primary font-semibold">
             TK {salesPrice}
