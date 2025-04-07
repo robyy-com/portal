@@ -7,6 +7,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 interface props {
   hover: boolean;
@@ -25,13 +26,13 @@ function SocialShare({ hover }: props) {
         <FaLinkedinIn size={20} />
       </Link>
       <Link
-        href="#"
+        href="https://x.com/ROBYY9708094891?t=y-p5PKyoEx2zd9OgaUSoCQ&s=08"
         target="_blank"
         className={`${
           hover && "hover:bg-white hover:text-primaryColorHover"
         }   xl:p-4 p-2 sm:p-3 text-white  transition-all hover:scale-110   bg-primaryColorHover rounded-xl`}
       >
-        <FaTwitter size={20} />
+        <FaSquareXTwitter size={20} />
       </Link>
       <Link
         href="https://www.facebook.com/share/15onWZRzDV/?mibextid=qi2Omg"

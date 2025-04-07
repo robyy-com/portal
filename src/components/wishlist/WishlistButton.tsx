@@ -63,10 +63,10 @@ function WishlistButton({ product, label }: props) {
   };
 
   return (
-    <div className="flex items-center gap-2 group">
+    <div className="flex items-center gap-1 group justify-center">
       <button
         onClick={handleWishlist}
-        className="p-3 text-center leading-10 group-hover:bg-textColor transition-all group-hover:text-white bg-white rounded-[50%]"
+        className="p-2 text-center group-hover:bg-textColor transition-all group-hover:text-white bg-white rounded-[50%]"
       >
         <IoMdHeartEmpty size={20} />
       </button>

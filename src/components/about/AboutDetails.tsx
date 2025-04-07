@@ -5,11 +5,11 @@ function AboutDetails() {
     <div>
       <div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold"> Acquaintance:</h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold"> Acquaintance:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             A warm welcome to{" "}
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -17,7 +17,7 @@ function AboutDetails() {
             online shop. Here, you can purchase high-quality cosmetics and
             skincare products at retail prices.
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -27,10 +27,10 @@ function AboutDetails() {
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold"> Privacy:</h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold"> Privacy:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -40,13 +40,11 @@ function AboutDetails() {
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold">
-            Required Information:
-          </h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold">Required Information:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             For placing an order with{" "}
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -59,14 +57,11 @@ function AboutDetails() {
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl  text-white font-bold">
-            {" "}
-            Delivery Timeline:{" "}
-          </h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl  font-bold"> Delivery Timeline: </h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             All products in stock at{" "}
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -78,8 +73,8 @@ function AboutDetails() {
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl  text-white font-bold">Payment Process:</h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl  font-bold">Payment Process:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             Customers can place orders either through Cash on Delivery or
             advance payment.
             <br /> The delivery charge within Dhaka is 60 Taka, and for other
@@ -87,13 +82,13 @@ function AboutDetails() {
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold"> Return Policy:</h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold"> Return Policy:</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             Customers can return products under the following circumstances:{" "}
             <br />
             If the wrong product is delivered by{" "}
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -101,7 +96,7 @@ function AboutDetails() {
             . <br />
             If the wrong shade is delivered by{" "}
             <Link
-              className=" text-white font-semibold text-lg"
+              className=" font-semibold text-lg"
               href="https://www.robyy.com/"
             >
               “ROBYY.com”
@@ -115,8 +110,8 @@ function AboutDetails() {
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold"> Exchange Policy: </h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold"> Exchange Policy: </h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             √ Exchange requests cannot be made if the product has been used.
             <br />
             √ If the product is kept intact, the customer can apply for an
@@ -125,8 +120,8 @@ function AboutDetails() {
           </p>
         </div>
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-xl text-white font-bold"> Refund Policy: </h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold"> Refund Policy: </h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             Refund requests are not accepted after the delivery of the correct
             product .<br />
             Approved refunds will be processed within 3 working days. <br />
@@ -136,22 +131,16 @@ function AboutDetails() {
         </div>
 
         <div className="mb-7  lg:mb-12">
-          <h2 className="text-lg text-white font-bold">
-            Phone: +8801960710948
-          </h2>
-          <h2 className="text-lg text-white font-bold">
-            Email: info@robyy.com
-          </h2>
-          <h2 className="text-lg text-white font-bold">
+          <h2 className="text-lg font-bold">Phone: +8801960710948</h2>
+          <h2 className="text-lg font-bold">Email: info@robyy.com</h2>
+          <h2 className="text-lg font-bold">
             Address: Korbona, Kalu Mistrir Mor, Rajshashi.
           </h2>
         </div>
 
         <div className="mb-7 lg:mb-12">
-          <h2 className="text-xl text-white font-bold">
-            Join the ROBYY Family
-          </h2>
-          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal text-thirdtextColor leading-[34px]">
+          <h2 className="text-xl font-bold">Join the ROBYY Family</h2>
+          <p className="mt-2 lg:mt-5 text-base lg:text-regular font-normal leading-[34px]">
             Thank you for choosing ROBYY. We invite you to explore our
             collections, join our community, and share in the beauty and
             elegance of our creations. Follow us on social media and subscribe

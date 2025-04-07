@@ -84,6 +84,7 @@ const TrendingProducts = () => {
 
         <SliderComponent {...settings} className="tending-slide">
           {data &&
+            data?.length > 0 &&
             data?.slice(0, 10)?.map((product: Product, index: number) => (
               <div className=" px-3" key={product.Id}>
                 <ProductCard product={product} />

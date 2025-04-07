@@ -1,5 +1,5 @@
 export const apiUrl =
-  process.env.API_BASE_URL || "https://api.robyy.com/v1.1.0/";
+  process.env.API_BASE_URL || "https://api.robyy.com/v1.1.0";
 
 // Fetch Products
 export const fetchProducts = async () => {
@@ -139,6 +139,17 @@ export const fetchSingleBlog = async (blogTitle: string) => {
 
 export const fetchNewArrivalProducts = async () => {
   const response = await fetch(`${apiUrl}/new-arrival`, {
+    cache: "no-cache",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Error: ${response.statusText}`);
+  }
+  return await response.json();
+};
+
+export const fetchBestDeals = async () => {
+  const response = await fetch(`${apiUrl}/bestdeals?limit=12`, {
     cache: "no-cache",
   });
 

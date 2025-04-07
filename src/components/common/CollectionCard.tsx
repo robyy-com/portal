@@ -14,7 +14,7 @@ function CollectionCard({ brand }: any) {
         />
 
         <div className="absolute bottom-6  left-8  ">
-          <button className="text-lg xl:text-xl  px-4 font-bold   text-primaryColor rounded-md uppercase">
+          <button className="text-lg xl:text-xl block py-2 border bg-textColor hover:bg-primaryColorHover text-white transition-all border-[#000] text-[#000] font-medium rounded-md px-8">
             Explore
           </button>
         </div>

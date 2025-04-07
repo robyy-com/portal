@@ -89,6 +89,7 @@ const Categories = () => {
 
       <SliderComponent {...settings} className="category-slide">
         {data &&
+          data?.length > 0 &&
           data?.map((item: Category, index: number) => (
             <Link href={`/category/${item.categorySlug}`} key={index}>
               <div key={index} className=" px-3">
