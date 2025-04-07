@@ -12,13 +12,13 @@ const BestDeals = async () => {
       <h2 className="py-6 text-2xl text-center lg:text-start lg:text-[35px] font-bold">
         Best Deals
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-5 gap-3 px-2 lg:px-0 2xl:gap-12  ">
+      <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-5 gap-4 px-2 lg:px-0 2xl:gap-12  ">
         {bestDeals &&
           bestDeals?.length > 0 &&
           bestDeals?.map((item: any, index: number) => (
             <div
               key={index}
-              className="flex mt-2 xl:mt-0 flex-col justify-between items-center xl:flex-row gap-2 bg-white rounded-lg overflow-hidden cursor-pointer"
+              className="flex mt-2 xl:mt-0 flex-col md:items-center items-start xl:flex-row gap-4 bg-white rounded-lg overflow-hidden cursor-pointer"
             >
               {/* <Image src={item.proImage} alt={item.title} /> */}
               {item?.proImage !== "" ? (

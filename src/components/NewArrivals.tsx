@@ -14,15 +14,13 @@ const NewArrivals = async () => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full">
-        {newProducts.length > 0 ? (
+        {newProducts &&
+          newProducts?.length > 0 &&
           newProducts
             .slice(0, 10)
             .map((product: any) => (
               <ProductCard key={product?.Id} product={product} />
-            ))
-        ) : (
-          <p>not found newArrival products</p>
-        )}
+            ))}
       </div>
       <div className=" mt-14 flex justify-center">
         <Link href="/products">

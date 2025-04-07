@@ -51,7 +51,8 @@ const Blogs = async () => {
         Blogs
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-10">
-        {blogs ? (
+        {blogs &&
+          blogs.length > 0 &&
           blogs.slice(0, 4).map((blogItem: any) => (
             <Link
               href={`blog/${blogItem?.postSlug}`}
@@ -77,10 +78,7 @@ const Blogs = async () => {
                 </p>
               </div>
             </Link>
-          ))
-        ) : (
-          <p>not found blogs...!</p>
-        )}
+          ))}
       </div>
       <div className="mt-1 flex justify-center">
         <Link href="/blogs">
