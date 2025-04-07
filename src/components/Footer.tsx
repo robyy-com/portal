@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FaMusic } from "react-icons/fa6";
 import CopyRight from "./CopyRight";
 import SocialShare from "./SocialShare";
+import { footerLogo } from "../../public";
+import Image from "next/image";
 
 const Footer = async () => {
   const categories: Category[] = await fetchCategories(); // Ensure it's an array
@@ -14,15 +16,14 @@ const Footer = async () => {
         <div className="grid grid-cols-4 gap-3 lg:grid-cols-12 lg:gap-4 py-10">
           <div className="col-span-4 items-center ">
             <div className="mb-5">
-              ROBYY
-              {/* <Image src={logo} alt="Missing Logo" /> */}
+              <Image src={footerLogo} alt="Missing Logo" />
             </div>
-            <p className="mt-3">
+            <p className="mt-4">
               Luxury cosmetics, affordable prices – because you deserve the
               best. Unbox confidence with top-quality cosmetics for
               every skin type.
             </p>
-            <div className=" md:mt-[52px] mt-6 ">
+            <div className="mt-6">
               <SocialShare hover={true} />
             </div>
           </div>

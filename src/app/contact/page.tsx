@@ -23,8 +23,8 @@ function ContactPage() {
           </div> */}
         </div>
 
-        <main className="  bg-[#1f1980] py-10   lg:px-[100px] ">
-          <h2 className=" flex items-center text-white gap-4  pb-6 xl:mb-12 text-regular md:text-xl lg:text-3xl xl:text-[35px] font-bold">
+        <main className="  py-10   lg:px-[100px] ">
+          <h2 className=" flex items-center gap-4  pb-6 xl:mb-12 text-regular md:text-xl lg:text-3xl xl:text-[35px] font-bold">
             Contact Us <FaArrowRightLong />
           </h2>
           <ContactForm />

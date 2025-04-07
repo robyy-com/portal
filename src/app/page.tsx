@@ -47,7 +47,7 @@ export default function Home() {
           <TopTen />
         </div> */}
 
-        <div className=" mt-5 py-10">{/* <FlashSale /> */}</div>
+        <div className="mt-5 py-10">{/* <FlashSale /> */}</div>
         {/* <div className=" mt-5">
           <HotOffer />
         </div> */}

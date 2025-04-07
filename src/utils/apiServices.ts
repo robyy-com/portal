@@ -147,3 +147,14 @@ export const fetchNewArrivalProducts = async () => {
   }
   return await response.json();
 };
+
+export const fetchBestDeals = async () => {
+  const response = await fetch(`${apiUrl}/bestdeals?limit=12`, {
+    cache: "no-cache",
+  });
+
+  if (!response.ok) {
+    throw new Error(`Error: ${response.statusText}`);
+  }
+  return await response.json();
+};

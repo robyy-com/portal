@@ -6,8 +6,8 @@ function AboutPage() {
   return (
     <div>
       <div className="container mx-auto  px-2.5 lg:my-10 my-8">
-        <div className=" bg-[#1f1980] py-10  px-10 ">
-          <h2 className=" flex items-center text-white  pb-6 gap-4 xl:mb-12 text-regular md:text-xl lg:text-3xl xl:text-[35px] font-bold">
+        <div className=" py-10  px-10 ">
+          <h2 className=" flex items-center pb-6 gap-4 xl:mb-12 text-regular md:text-xl lg:text-3xl xl:text-[35px] font-bold">
             About Us <FaArrowRightLong />
           </h2>
           <p className="text-center mb-5"></p>

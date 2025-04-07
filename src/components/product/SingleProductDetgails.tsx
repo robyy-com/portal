@@ -20,9 +20,6 @@ function SingleProductDetgails(product: Product) {
 
   return (
     <div>
-      <p className=" space-x-2 text-gray-800 font-regular text-secondarytext text-[18px] uppercase">
-        sku {sku}
-      </p>
       <h2 className="xl:text-[26px] text-regular font-semibold mt-2 capitalize  mb-4">
         {title}
       </h2>
@@ -36,26 +33,6 @@ function SingleProductDetgails(product: Product) {
               </span>
             ))}
             <p className=" text-thirdtextColor text-regular">(220)</p>
-          </div>
-          <div className=" h-[30px] border-[1px]  border-thirdtextColor"></div>
-          <div className=" flex gap-1 items-center">
-            <p className="font-bold text-2xl ">
-              <svg
-                width="21"
-                height="15"
-                viewBox="0 0 21 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.13253 14.7054L0.307525 8.16802C-0.102508 7.77527 -0.102508 7.13846 0.307525 6.74567L1.79242 5.32332C2.20245 4.93053 2.86731 4.93053 3.27735 5.32332L7.875 9.72717L17.7227 0.294565C18.1327 -0.0981884 18.7976 -0.0981884 19.2076 0.294565L20.6925 1.71692C21.1025 2.10967 21.1025 2.74648 20.6925 3.13927L8.61746 14.7054C8.20739 15.0982 7.54256 15.0982 7.13253 14.7054V14.7054Z"
-                  fill="#BABABA"
-                />
-              </svg>
-            </p>
-            <p className=" text-regular text-primaryColor font-bold">
-              4,320 <span className=" text-[#121212] font-normal">Sold</span>
-            </p>
           </div>
         </div>
 
