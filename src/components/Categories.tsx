@@ -98,9 +98,9 @@ const Categories = () => {
                     <Image
                       src={item.categoryImg || catagory}
                       alt="category image"
-                      className="w-full"
-                      width={200}
-                      height={200}
+                      width={400}
+                      height={400}
+                      className="w-full h-full sm:h-52 object-fit"
                     />
                   </div>
                   <div className="text-center">

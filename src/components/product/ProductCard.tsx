@@ -32,7 +32,7 @@ function ProductCard({
 
   return (
     <div>
-      <div className="flex h-full flex-col justify-between rounded-3xl shadow-xl mt-5 bg-white">
+      <div className="flex h-full flex-col justify-between rounded-3xl shadow-xl bg-white">
         <div className="h-[250px] item rounded-t-3xl overflow-hidden w-full relative items-center">
           <Image
             src={proImage || productImage}
@@ -65,7 +65,7 @@ function ProductCard({
               </Link>
               <Link
                 href={`/product/${productSlug}`}
-                className="p-3 text-center leading-10 hover:bg-textColor transition-all hover:text-white bg-white rounded-[50%]"
+                className="p-2 text-center leading-10 hover:bg-textColor transition-all hover:text-white bg-white rounded-[50%]"
               >
                 <IoEyeSharp size={20} />
               </Link>

@@ -12,7 +12,6 @@ function BannerCard({ imgSource, navigateURL, altText }: BannerType) {
           blurDataURL={imgSource}
           layout="fill"
           quality={100}
-          objectFit="cover"
         />
       </div>
 
