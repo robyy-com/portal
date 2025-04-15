@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import blogImage from "../../public/images/noImage/blog_no_image.jpg";
 import Button from "./ui/Button";
+import { productNoImage } from "../../public";
 const Blogs = async () => {
   // const settings = {
   //   dots: true,
@@ -61,10 +62,10 @@ const Blogs = async () => {
             >
               <Image
                 className="object-cover w-full h-48"
-                src={blogItem?.thumbImg || blogImage}
+                src={blogItem?.thumbImg || productNoImage}
                 width={700}
                 height={700}
-                alt="missing image"
+                alt="blog image"
               />
               <div className="p-4 flex flex-col  h-full">
                 <Link

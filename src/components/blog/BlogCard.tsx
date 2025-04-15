@@ -1,7 +1,7 @@
 import { Blog } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
-
+import { productNoImage } from "../../../public";
 interface BlogCardProps {
   blog: Blog;
 }
@@ -18,7 +18,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
           height={180}
           decoding="async"
           className="rounded-sm"
-          src={blog.thumbImg}
+          src={blog.thumbImg || productNoImage}
         />
       </div>
 

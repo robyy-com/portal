@@ -7,6 +7,7 @@ import notFound from "./images/404.jpg";
 import footerLogo from "./images/footer-logo.png";
 import productDetailNoImg from "./images/noImage/top_brand_no_image.jpg";
 import brandNoImage from "./images/noImage/best-deals.jpg";
+import productNoImage from "./images/noImage/product_no_image.jpg";
 
 export {
   logo,
@@ -17,4 +18,5 @@ export {
   footerLogo,
   productDetailNoImg,
   brandNoImage,
+  productNoImage,
 };

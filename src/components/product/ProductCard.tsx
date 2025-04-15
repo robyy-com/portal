@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
-import productImage from "../../../public/images/noImage/product_no_image.jpg";
 import WishlistButton from "../wishlist/WishlistButton";
 import AddToCart from "./AddToCart";
+import { productNoImage } from "../../../public";
 
 function ProductCard({
   product,
@@ -35,7 +35,7 @@ function ProductCard({
       <div className="flex h-full flex-col justify-between rounded-3xl shadow-xl bg-white">
         <div className="h-[250px] item rounded-t-3xl overflow-hidden w-full relative items-center">
           <Image
-            src={proImage || productImage}
+            src={proImage || productNoImage}
             alt="Product"
             layout="fill"
             objectFit="cover"
