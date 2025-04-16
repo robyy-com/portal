@@ -14,7 +14,7 @@ async function CategoryPage() {
       </h2>
       <p className="text-center mb-5"></p>
 
-      <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 ">
+      <div className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
         {categories &&
           categories?.map((item: Category, index: number) => (
             <Link href={`/category/${item.categorySlug}`} key={index}>
@@ -23,9 +23,9 @@ async function CategoryPage() {
                   <Image
                     src={item.categoryImg || catagory}
                     alt="category image"
-                    width={200}
-                    height={200}
-                    className=" w-full"
+                    width={400}
+                    height={400}
+                    className="w-full h-full sm:h-52 object-fit"
                   />
                 </div>
                 <div className="py-4 text-center">

@@ -37,7 +37,6 @@ export default function OrderList() {
       <table className="table-fixed min-w-[640px] w-full text-left border-collapse">
         <thead>
           <tr className="bg-gray-200">
-            <th className="p-2">Image</th>
             <th className="p-2">Order ID</th>
             <th className="p-2">Payment Method</th>
             <th className="p-2">Address</th>
@@ -50,14 +49,6 @@ export default function OrderList() {
           {orderData && orderData?.length > 0 ? (
             orderData?.map((order: any) => (
               <tr key={order.id} className="border-t border-gray-300">
-                <td className="p-2">
-                  <Image
-                    src={order.image || proImage} // Use order image if available
-                    alt="Product Image"
-                    width={60}
-                    height={60}
-                  />
-                </td>
                 <td className="p-2">{order.orderId}</td>
                 <td className="p-2">{order.paymentMethod}</td>
                 <td className="p-2">{order.address}</td>

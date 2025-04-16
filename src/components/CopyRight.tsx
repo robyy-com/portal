@@ -15,7 +15,7 @@ export default function CopyRight() {
             target="_blank"
             className="font-semibold hover:underline"
           >
-            Techqul
+            TechQul
           </Link>
         </p>
       </div>

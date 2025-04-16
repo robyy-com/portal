@@ -18,7 +18,6 @@ export default function AddsItem({
           className="w-full"
           width={1500}
           height={600}
-          objectFit="cover"
         />
       </Link>
     </div>

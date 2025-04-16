@@ -6,29 +6,70 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Search() {
   const [searchKey, setSearchKey] = useState<string>("");
-  const [products, setProducts] = useState<any>([]);
-  const [searchproducts, setSearchproducts] = useState<any>([]);
+  const [products, setProducts] = useState<any[]>([]);
+  const [searchProducts, setSearchProducts] = useState<any[]>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const debounceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const fetchProductData = async () => {
-    try {
-      const res: any = await fetchProducts();
-      if (res?.length > 0) {
-        setProducts(res);
-      }
-    } catch (error) {
-      console.error("Failed to fetch adds:", error);
-    }
-  };
+  // Fetch products once
   useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const res: any = await fetchProducts();
+        if (res?.length > 0) {
+          setProducts(res);
+        } else {
+          console.warn("Empty product list from API.");
+        }
+      } catch (error) {
+        console.error("Failed to fetch products:", error);
+      }
+    };
     fetchProductData();
   }, []);
 
-  const handleDropdownClose = () => {
-    setSearchproducts([]);
+  // Debounced Search
+  useEffect(() => {
+    if (debounceTimeoutRef.current) {
+      clearTimeout(debounceTimeoutRef.current);
+    }
+
+    debounceTimeoutRef.current = setTimeout(() => {
+      const normalize = (str: string) =>
+        str
+          ?.toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "") // remove accents
+          .replace(/\s+/g, " ") // collapse multiple spaces
+          .trim();
+
+      const query = normalize(searchKey);
+      if (query !== "") {
+        const filtered = products.filter((product: any) => {
+          const title = normalize(product?.title || "");
+          return title.includes(query);
+        });
+        setSearchProducts(filtered);
+      } else {
+        setSearchProducts([]);
+      }
+    }, 300);
+
+    return () => {
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
+      }
+    };
+  }, [searchKey, products]);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchKey(e.target.value);
   };
 
-  // Hide dropdown if clicked outside
+  const handleDropdownClose = () => {
+    setSearchProducts([]);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -45,34 +86,20 @@ export default function Search() {
     };
   }, []);
 
-  const handleSearch = (e: any) => {
-    const value = e.target.value;
-    setSearchKey(value);
-
-    if (value) {
-      const filteredProducts = products.filter((product: any) =>
-        product.title.toLowerCase().includes(value.toLowerCase())
-      );
-      setSearchproducts(filteredProducts);
-    } else {
-      setSearchproducts([]);
-    }
-  };
-
   return (
-    <div className="w-full relative ">
+    <div className="w-full relative">
       <input
         type="text"
-        className="w-full  border-none bg-bgColor rounded-md py-2 md:py-4 px-4 pr-10 focus:outline-none focus:border-dark-500"
+        className="w-full border-none bg-bgColor rounded-md py-2 md:py-4 px-4 pr-10 focus:outline-none focus:border-dark-500"
         placeholder="Search..."
         value={searchKey}
         onChange={handleSearch}
       />
       <FaSearch className="absolute right-4 top-2 md:top-4 text-2xl" />
-      {searchKey && searchproducts && searchproducts?.length > 0 && (
+      {searchKey && searchProducts.length > 0 && (
         <div ref={dropdownRef}>
           <Dropdown
-            searchproducts={searchproducts}
+            searchproducts={searchProducts}
             onSelect={handleDropdownClose}
           />
         </div>

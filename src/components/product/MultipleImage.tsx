@@ -22,7 +22,7 @@ function CustomNextArrow(props: any) {
         top: "50%",
         right: "-30px",
         transform: "translateY(-50%)",
-        zIndex: 10,
+        zIndex: 5,
       }}
       onClick={onClick}
     >
@@ -43,7 +43,7 @@ function CustomPrevArrow(props: any) {
         cursor: "pointer",
         top: "50%",
         transform: "translateY(-50%)",
-        zIndex: 10,
+        zIndex: 5,
       }}
       onClick={onClick}
     >

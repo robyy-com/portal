@@ -4,6 +4,7 @@ import { MdOutlineStarPurple500, MdOutlineStarBorder } from "react-icons/md";
 import products from "../../public/images/noImage/best_deals_no_image.jpg";
 import { fetchBestDeals } from "@/utils/apiServices";
 import { brandNoImage, productDetailNoImg } from "../../public";
+import Link from "next/link";
 const BestDeals = async () => {
   const bestDeals = await fetchBestDeals();
 
@@ -16,55 +17,55 @@ const BestDeals = async () => {
         {bestDeals &&
           bestDeals?.length > 0 &&
           bestDeals?.map((item: any, index: number) => (
-            <div
-              key={index}
-              className="flex mt-2 xl:mt-0 flex-col items-center xl:flex-row gap-4 bg-white rounded-lg overflow-hidden cursor-pointer"
-            >
-              {/* <Image src={item.proImage} alt={item.title} /> */}
-              {item?.proImage !== "" ? (
-                <Image
-                  src={item?.proImage}
-                  alt={item?.proImage}
-                  width={100}
-                  height={100}
-                  objectFit="cover"
-                />
-              ) : (
-                <Image
-                  src={brandNoImage}
-                  alt="Brand image"
-                  width={100}
-                  height={100}
-                  objectFit="cover"
-                />
-              )}
+            <Link href={`/product/${item.productSlug}`} key={index}>
+              <div className="flex mt-2 xl:mt-0 flex-col items-center xl:flex-row gap-4 bg-white rounded-lg overflow-hidden">
+                {/* <Image src={item.proImage} alt={item.title} /> */}
+                {item?.proImage !== "" ? (
+                  <Image
+                    src={item?.proImage}
+                    alt={item?.proImage}
+                    width={100}
+                    height={100}
+                    objectFit="cover"
+                  />
+                ) : (
+                  <Image
+                    src={brandNoImage}
+                    alt="Brand image"
+                    width={100}
+                    height={100}
+                    objectFit="cover"
+                  />
+                )}
 
-              <div className="flex flex-col justify-between">
-                <h3 className="md:text-base text-sm  font-medium text-gray-800">
-                  {item.title}
-                </h3>
+                <div className="flex flex-col justify-between">
+                  <h3 className="md:text-base text-sm  font-medium text-gray-800">
+                    {item.title}
+                  </h3>
 
-                <div>
-                  <p className="mt-4 text-base md:text-lg text-gray-600">
-                    TK {item.salesPrice}
-                  </p>
-
-                  <div className="flex  items-center">
-                    {[1, 2, 3, 4, 5].map((star) =>
-                      item.productRating === 0 || star > item.productRating ? (
-                        <MdOutlineStarBorder key={star} />
-                      ) : (
-                        <MdOutlineStarPurple500 key={star} />
-                      )
-                    )}
-
-                    <p className="text-secondaryColor text-sm md:text-base ml-1">
-                      ({item.productRating})
+                  <div>
+                    <p className="mt-4 text-base md:text-lg text-gray-600">
+                      TK {item.salesPrice}
                     </p>
+
+                    <div className="flex  items-center">
+                      {[1, 2, 3, 4, 5].map((star) =>
+                        item.productRating === 0 ||
+                        star > item.productRating ? (
+                          <MdOutlineStarBorder key={star} />
+                        ) : (
+                          <MdOutlineStarPurple500 key={star} />
+                        )
+                      )}
+
+                      <p className="text-secondaryColor text-sm md:text-base ml-1">
+                        ({item.productRating})
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </section>
