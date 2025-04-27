@@ -16,16 +16,15 @@ const Navbar = () => {
     <nav>
       <div className="flex items-center justify-between h-16">
         <div className="w-full flex items-center justify-between gap-8 md:hidden my-4 md:my-0">
-          <div className="w-full">
-            <Search />
-          </div>
-
           <button
             onClick={toggleMenu}
             className="text-2xl textColor focus:outline-none"
           >
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
+          <div className="w-full">
+            <Search />
+          </div>
         </div>
 
         <div className="hidden md:text-[12px] lg:text-base text-center  md:flex space-x-3 items-center">

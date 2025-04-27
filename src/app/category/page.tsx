@@ -25,7 +25,7 @@ async function CategoryPage() {
                     alt="category image"
                     width={400}
                     height={400}
-                    className="w-full h-full sm:h-52 object-fit"
+                    className="w-full h-full sm:h-44 object-fit"
                   />
                 </div>
                 <div className="py-4 text-center">

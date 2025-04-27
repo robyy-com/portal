@@ -23,18 +23,19 @@ export async function generateMetadata(
   const productSlug = (await params).productSlug;
 
   const singleProduct = await fetchSingleProducts(productSlug);
+  const { seoMeta } = singleProduct || {};
 
   return {
-    title: `Robyy Jewellery - ${singleProduct?.title}`,
+    title: `Robyy Jewellery - ${seoMeta[0]?.title}`,
     description:
-      singleProduct?.description || "Read our latest updates and insights.",
-    // keywords: singleProduct?.keywords || "blog, article, updates",
+      seoMeta[0]?.metaDescription || "Read our latest updates and insights.",
+    keywords: seoMeta[0]?.keywords || "blog, article, updates",
 
     openGraph: {
-      title: `Robyy Jewellery - ${singleProduct?.title}`,
+      title: `Robyy Jewellery - ${seoMeta[0]?.title}`,
       description:
-        singleProduct?.description || "Read our latest updates and insights.",
-      url: `https://www.robyy.com/${productSlug}`,
+        seoMeta[0]?.metaDescription || "Read our latest updates and insights.",
+      url: `https://www.robyy.com/product/${productSlug}`,
       type: "article",
       images: [
         {
@@ -43,16 +44,16 @@ export async function generateMetadata(
             "../../../../../public/assert/images/social-logo-share.png", // Provide a fallback image
           width: 500,
           height: 500,
-          alt: singleProduct?.title,
+          alt: seoMeta[0]?.title,
         },
       ],
     },
 
     twitter: {
       card: "summary_large_image",
-      title: `Robyy Jewellery - ${singleProduct?.title}`,
+      title: `Robyy Jewellery - ${seoMeta[0]?.title}`,
       description:
-        singleProduct?.description || "Read our latest updates and insights.",
+        seoMeta[0]?.metaDescription || "Read our latest updates and insights.",
       images: [
         singleProduct?.proImage ||
           "../../../../../public/assert/images/social-logo-share.png",

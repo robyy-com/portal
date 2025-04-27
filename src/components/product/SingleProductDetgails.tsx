@@ -16,6 +16,8 @@ function SingleProductDetgails(product: Product) {
     previousPrice,
     country,
     category,
+    categorySlug,
+    brandSlug,
   } = product || {};
 
   return (
@@ -44,7 +46,7 @@ function SingleProductDetgails(product: Product) {
           <WishlistButton product={product} label="Add to wishlist" />
         </Link>
       </div>
-      <div className=" flex justify-between items-center py-4 xl:py-6 border-b-2 border-[#EAEAEA]">
+      <div className=" flex justify-between items-center py-4 border-b-2 border-[#EAEAEA]">
         <div className="flex items-baseline mb-1 space-x-2 font-roboto ">
           <p className="xl:text-4xl text-regular lg:text-xl text-primary font-semibold">
             TK {salesPrice}
@@ -85,7 +87,7 @@ function SingleProductDetgails(product: Product) {
           </p>
           <Link
             className=" font-semibold hover:underline transition-all text-xl cursor-pointer"
-            href={`/category/${category}`}
+            href={`/category/${categorySlug}`}
           >
             : {category}
           </Link>
@@ -101,7 +103,7 @@ function SingleProductDetgails(product: Product) {
           <p className="text-primaryColor text-xl font-semibold w-24">Brand</p>
           <Link
             className=" font-semibold hover:underline transition-all text-xl cursor-pointer"
-            href={`/brand/${brand}`}
+            href={`/brand/${brandSlug}`}
           >
             : {brand}
           </Link>
