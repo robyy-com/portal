@@ -71,7 +71,7 @@ export default function OrderList() {
                       <FaClockRotateLeft />
                     </div>
                     <p
-                      className={`p-0 m-0 text-sm ${
+                      className={`p-0 m-0 text-[10px] ${
                         order.orderStatus === "Pending" ||
                         order.orderStatus === "Processing" ||
                         order.orderStatus === "Delivered"
@@ -95,7 +95,7 @@ export default function OrderList() {
                       <BsBoxSeam />
                     </div>
                     <p
-                      className={`p-0 m-0 text-sm ${
+                      className={`p-0 m-0 text-[10px] ${
                         order.orderStatus === "Processing" ||
                         order.orderStatus === "Delivered"
                           ? "text-black"
@@ -117,7 +117,7 @@ export default function OrderList() {
                       <LiaTruckPickupSolid />
                     </div>
                     <p
-                      className={`p-0 m-0 text-sm ${
+                      className={`p-0 m-0 text-[10px] ${
                         order.orderStatus === "Delivered"
                           ? "text-black"
                           : "text-gray-400"

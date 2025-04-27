@@ -100,7 +100,7 @@ const Categories = () => {
                       alt="category image"
                       width={400}
                       height={400}
-                      className=""
+                      className="w-full h-full sm:h-44 object-fit"
                     />
                   </div>
                   <div className="text-center">
