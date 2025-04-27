@@ -22,6 +22,7 @@ import Cookies from "js-cookie";
 import { IoMdHeartEmpty } from "react-icons/io";
 import Search from "./Search";
 import Input from "./ui/Input";
+import { api_key } from "@/utils/helper";
 
 const TopNavbar = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -73,7 +74,10 @@ const TopNavbar = () => {
 
     setOtpSendLoading(true);
     try {
-      const res: any = await signinWithOtp({ mobileNo: number }).unwrap();
+      const res: any = await signinWithOtp({
+        mobileNo: number,
+        api_key,
+      }).unwrap();
       if (res?.statusCode === "1010") {
         setNumberValidation("");
         setIsOtpSent(true);

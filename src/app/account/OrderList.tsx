@@ -1,12 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import proImage from "../../../public/images/Products iamge/product-13 1 (1).png";
-import { useSelector } from "react-redux";
+
 import { noOrderImg } from "../../../public";
 import { useLazyGetOrderListQuery } from "@/features/auth/authApi";
 import Loading from "./loading";
 import Cookies from "js-cookie";
+import { api_key } from "@/utils/helper";
+import { LiaTruckPickupSolid } from "react-icons/lia";
+import { BsFillBoxSeamFill } from "react-icons/bs";
+import { FaClockRotateLeft } from "react-icons/fa6";
+import { BsBoxSeam } from "react-icons/bs";
 
 export default function OrderList() {
   const [getOrderList, { data, isLoading, error }] = useLazyGetOrderListQuery();
@@ -17,7 +21,7 @@ export default function OrderList() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const result = await getOrderList({ mobileNo }).unwrap();
+        const result = await getOrderList({ mobileNo, api_key }).unwrap();
         setOrderData(result);
       } catch (error) {
         console.error("Failed to fetch orders:", error);
@@ -53,16 +57,75 @@ export default function OrderList() {
                 <td className="p-2">{order.paymentMethod}</td>
                 <td className="p-2">{order.address}</td>
                 <td className="p-2">{order.orderDate}</td>
-                <td className="p-2">
-                  {order.isProcessed === false ? (
-                    <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                <td className="p-2 block lg:flex items-center gap-2">
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`h-8 w-8 rounded-full ${
+                        order.orderStatus === "Pending" ||
+                        order.orderStatus === "Processing" ||
+                        order.orderStatus === "Delivered"
+                          ? "bg-yellow-400"
+                          : "bg-gray-400"
+                      } text-white flex items-center justify-center`}
+                    >
+                      <FaClockRotateLeft />
+                    </div>
+                    <p
+                      className={`p-0 m-0 text-sm ${
+                        order.orderStatus === "Pending" ||
+                        order.orderStatus === "Processing" ||
+                        order.orderStatus === "Delivered"
+                          ? "text-black"
+                          : "text-gray-400"
+                      }`}
+                    >
                       Pending
-                    </span>
-                  ) : (
-                    <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                      Completed
-                    </span>
-                  )}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`h-8 w-8 rounded-full ${
+                        order.orderStatus === "Processing" ||
+                        order.orderStatus === "Delivered"
+                          ? "bg-yellow-400"
+                          : "bg-gray-400"
+                      } text-white flex items-center justify-center`}
+                    >
+                      <BsBoxSeam />
+                    </div>
+                    <p
+                      className={`p-0 m-0 text-sm ${
+                        order.orderStatus === "Processing" ||
+                        order.orderStatus === "Delivered"
+                          ? "text-black"
+                          : "text-gray-400"
+                      }`}
+                    >
+                      Processing
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`h-8 w-8 rounded-full ${
+                        order.orderStatus === "Delivered"
+                          ? "bg-yellow-400"
+                          : "bg-gray-400"
+                      } text-white flex items-center justify-center`}
+                    >
+                      <LiaTruckPickupSolid />
+                    </div>
+                    <p
+                      className={`p-0 m-0 text-sm ${
+                        order.orderStatus === "Delivered"
+                          ? "text-black"
+                          : "text-gray-400"
+                      }`}
+                    >
+                      Delivered
+                    </p>
+                  </div>
                 </td>
                 <td className="p-2">{order.grandTotal} tk</td>
               </tr>
