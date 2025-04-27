@@ -80,13 +80,15 @@ const Banner = () => {
   }, [getBanner]);
 
   return (
-    <SliderComponent {...settings} className="banner-slide">
-      {banners &&
-        banners?.length > 0 &&
-        banners.map((item: any, index: any) => (
-          <BannerCard key={index} {...item} />
-        ))}
-    </SliderComponent>
+    <>
+      {banners && banners.length > 0 && (
+        <SliderComponent {...settings} className="banner-slide">
+          {banners.map((item: any, index: any) => (
+            <BannerCard key={index} {...item} />
+          ))}
+        </SliderComponent>
+      )}
+    </>
   );
 };
 
