@@ -23,7 +23,7 @@ function SingleProductDetgails(product: Product) {
       <h2 className="xl:text-[26px] text-regular font-semibold capitalize  mb-4">
         {title}
       </h2>
-      <div className="flex justify-between mb-4 items-center">
+      <div className="flex justify-between items-center">
         <div className="flex items-center gap-4 ">
           <p className=" text-regular font-bold text-primaryColor">5.0</p>
           <div className="flex items-center gap-1 text-sm text-[18px] text-primaryColor">
@@ -64,23 +64,23 @@ function SingleProductDetgails(product: Product) {
         </div>
       </div>
 
-      <div className="space-y-2 mt-8 mb-11 ">
+      <div className="space-y-2 my-6 ">
         <p
           dangerouslySetInnerHTML={{ __html: description }}
-          className=" text-primaryColor text-regular font-semibold space-x-2 mb-5  font-titleFont "
+          className=" text-primaryColor text-regular font-semibold space-x-2 font-titleFont "
           style={{ fontFamily: "roboto, sans-serif" }}
         ></p>
         <div className="flex items-center gap-x-4 justify-start">
-          <p className="text-primaryColor text-xl mb-2 font-semibold w-24">
+          <p className="text-primaryColor text-xl font-semibold w-24">
             Country
           </p>
-          <p className="text-primaryColor text-xl mb-2 font-semibold">
+          <p className="text-primaryColor text-xl font-semibold">
             : {country || "Bangladesh"}
           </p>
         </div>
 
         <div className="flex items-center gap-x-4 justify-start">
-          <p className="text-primaryColor text-xl mb-2 font-semibold w-24">
+          <p className="text-primaryColor text-xl font-semibold w-24">
             Category
           </p>
           <Link
@@ -91,18 +91,14 @@ function SingleProductDetgails(product: Product) {
           </Link>
         </div>
         <div className="flex items-center gap-x-4 justify-start">
-          <p className="text-primaryColor text-xl mb-2 font-semibold w-24">
-            Stock
-          </p>
-          <p className="text-primaryColor text-xl mb-2 font-semibold">
+          <p className="text-primaryColor text-xl font-semibold w-24">Stock</p>
+          <p className="text-primaryColor text-xl font-semibold">
             : {stockAvailable ? "Available" : "Out of Stock"}
           </p>
         </div>
 
         <div className="flex items-center gap-x-4 justify-start">
-          <p className="text-primaryColor text-xl mb-2 font-semibold w-24">
-            Brand
-          </p>
+          <p className="text-primaryColor text-xl font-semibold w-24">Brand</p>
           <Link
             className=" font-semibold hover:underline transition-all text-xl cursor-pointer"
             href={`/brand/${brand}`}

@@ -92,7 +92,7 @@ const Categories = () => {
           data?.length > 0 &&
           data?.map((item: Category, index: number) => (
             <Link href={`/category/${item.categorySlug}`} key={index}>
-              <div key={index} className=" px-3">
+              <div key={index} className="px-3">
                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden flex flex-col justify-center items-center pb-4">
                   <div className="w-full">
                     <Image
@@ -100,7 +100,7 @@ const Categories = () => {
                       alt="category image"
                       width={400}
                       height={400}
-                      className="w-full h-full sm:h-52 object-fit"
+                      className=""
                     />
                   </div>
                   <div className="text-center">
