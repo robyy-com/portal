@@ -62,7 +62,7 @@ function Details(product: Product) {
         {selectImg !== "" ? (
           <Image
             src={selectImg}
-            alt="product"
+            alt={product.title}
             width={1000}
             height={1000}
             className="w-full rounded-xl transition-all duration-500 ease-in-out transform hover:scale-105"

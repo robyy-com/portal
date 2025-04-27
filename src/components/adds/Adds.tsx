@@ -30,7 +30,7 @@ export default function Adds({ className, location }: Props) {
     };
 
     fetchAdds();
-  }, []);
+  }, [getAdds]);
 
   return <div className={`${className}`}>{adds && <AddsItem {...adds} />}</div>;
 }

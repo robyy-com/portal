@@ -10,16 +10,14 @@ export default function AddsItem({
   altText,
 }: AddsType) {
   return (
-    <div>
-      <Link href={navigateURL} className="w-full h-32">
-        <Image
-          src={imgSource}
-          alt={altText}
-          className="w-full"
-          width={1500}
-          height={600}
-        />
-      </Link>
-    </div>
+    <Link href={navigateURL} className="w-full h-32">
+      <Image
+        src={imgSource}
+        alt={altText}
+        className="w-full"
+        width={1500}
+        height={600}
+      />
+    </Link>
   );
 }
