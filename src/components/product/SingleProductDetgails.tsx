@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FaHeart, FaStar } from "react-icons/fa";
 import robyy from "../../../public/images/ROBYYLogo.png";
 import WishlistButton from "../wishlist/WishlistButton";
+import { FaStarHalfStroke } from "react-icons/fa6";
+
 function SingleProductDetgails(product: Product) {
   const {
     sku,
@@ -18,6 +20,8 @@ function SingleProductDetgails(product: Product) {
     category,
     categorySlug,
     brandSlug,
+    ratingCount,
+    ratingRate,
   } = product || {};
 
   return (
@@ -27,14 +31,19 @@ function SingleProductDetgails(product: Product) {
       </h2>
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-4 ">
-          <p className=" text-regular font-bold text-primaryColor">5.0</p>
+          <p className=" text-regular font-bold text-primaryColor">
+            {ratingRate}
+          </p>
           <div className="flex items-center gap-1 text-sm text-[18px] text-primaryColor">
-            {[...Array(5)].map((_, i) => (
-              <span key={i}>
-                <FaStar />
-              </span>
-            ))}
-            <p className=" text-thirdtextColor text-regular">(220)</p>
+            {[1, 2, 3, 4, 5].map((star) =>
+              ratingRate === 0 || star > ratingRate ? (
+                <FaStarHalfStroke key={star} />
+              ) : (
+                <FaStar key={star} />
+              )
+            )}
+
+            <p className=" text-thirdtextColor text-regular">({ratingCount})</p>
           </div>
         </div>
 
