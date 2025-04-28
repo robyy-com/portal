@@ -7,7 +7,7 @@ import { IoEyeSharp } from "react-icons/io5";
 import WishlistButton from "../wishlist/WishlistButton";
 import AddToCart from "./AddToCart";
 import { productNoImage } from "../../../public";
-
+import { FaStarHalfStroke } from "react-icons/fa6";
 function ProductCard({
   product,
   remove,
@@ -28,6 +28,7 @@ function ProductCard({
     stockAvailable,
     discountRate,
     productSlug,
+    ratingRate,
   } = product;
 
   return (
@@ -84,11 +85,13 @@ function ProductCard({
             TK {salesPrice}
           </p>
           <div className="flex gap-1">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
+            {[1, 2, 3, 4, 5].map((star) =>
+              ratingRate == 0 || star > ratingRate ? (
+                <FaStarHalfStroke key={star} />
+              ) : (
+                <FaStar key={star} />
+              )
+            )}
           </div>
         </div>
 

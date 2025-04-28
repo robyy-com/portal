@@ -37,10 +37,10 @@ export default function OrderList() {
   }
 
   return (
-    <div className="overflow-x-auto">
-      <table className="table-fixed min-w-[640px] w-full text-left border-collapse">
-        <thead>
-          <tr className="bg-gray-200">
+    <div className="">
+      <table className="table-fixed  w-full text-left border-collapse">
+        <thead className="hidden lg:table-header-group">
+          <tr className="bg-gray-200  ">
             <th className="p-2">Order ID</th>
             <th className="p-2">Payment Method</th>
             <th className="p-2">Address</th>
@@ -49,86 +49,178 @@ export default function OrderList() {
             <th className="p-2">Total Amount</th>
           </tr>
         </thead>
+        <thead className="lg:hidden">
+          <tr className="bg-gray-200  ">
+            <th className="p-2">Order Details</th>
+            <th className="p-2">Status</th>
+          </tr>
+        </thead>
         <tbody>
           {orderData && orderData?.length > 0 ? (
             orderData?.map((order: any) => (
-              <tr key={order.id} className="border-t border-gray-300">
-                <td className="p-2">{order.orderId}</td>
-                <td className="p-2">{order.paymentMethod}</td>
-                <td className="p-2">{order.address}</td>
-                <td className="p-2">{order.orderDate}</td>
-                <td className="p-2 block lg:flex items-center gap-2">
-                  <div className="flex flex-col items-center">
-                    <div
-                      className={`h-8 w-8 rounded-full ${
-                        order.orderStatus === "Pending" ||
-                        order.orderStatus === "Processing" ||
-                        order.orderStatus === "Delivered"
-                          ? "bg-yellow-400"
-                          : "bg-gray-400"
-                      } text-white flex items-center justify-center`}
-                    >
-                      <FaClockRotateLeft />
+              <>
+                <tr
+                  key={order.id}
+                  className="border-t border-gray-300 hidden lg:table-row"
+                >
+                  <td className="p-2">{order.orderId}</td>
+                  <td className="p-2">{order.paymentMethod}</td>
+                  <td className="p-2">{order.address}</td>
+                  <td className="p-2">{order.orderDate}</td>
+                  <td className="p-2 block lg:flex items-center gap-2">
+                    <div className="flex flex-col items-center">
+                      <div
+                        className={`h-8 w-8 rounded-full ${
+                          order.orderStatus === "Pending" ||
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
+                        } text-white flex items-center justify-center`}
+                      >
+                        <FaClockRotateLeft />
+                      </div>
+                      <p
+                        className={`p-0 m-0 text-[10px] ${
+                          order.orderStatus === "Pending" ||
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "text-black"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        Pending
+                      </p>
                     </div>
-                    <p
-                      className={`p-0 m-0 text-[10px] ${
-                        order.orderStatus === "Pending" ||
-                        order.orderStatus === "Processing" ||
-                        order.orderStatus === "Delivered"
-                          ? "text-black"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      Pending
-                    </p>
-                  </div>
 
-                  <div className="flex flex-col items-center">
-                    <div
-                      className={`h-8 w-8 rounded-full ${
-                        order.orderStatus === "Processing" ||
-                        order.orderStatus === "Delivered"
-                          ? "bg-yellow-400"
-                          : "bg-gray-400"
-                      } text-white flex items-center justify-center`}
-                    >
-                      <BsBoxSeam />
+                    <div className="flex flex-col items-center">
+                      <div
+                        className={`h-8 w-8 rounded-full ${
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
+                        } text-white flex items-center justify-center`}
+                      >
+                        <BsBoxSeam />
+                      </div>
+                      <p
+                        className={`p-0 m-0 text-[10px] ${
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "text-black"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        Processing
+                      </p>
                     </div>
-                    <p
-                      className={`p-0 m-0 text-[10px] ${
-                        order.orderStatus === "Processing" ||
-                        order.orderStatus === "Delivered"
-                          ? "text-black"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      Processing
-                    </p>
-                  </div>
 
-                  <div className="flex flex-col items-center">
-                    <div
-                      className={`h-8 w-8 rounded-full ${
-                        order.orderStatus === "Delivered"
-                          ? "bg-yellow-400"
-                          : "bg-gray-400"
-                      } text-white flex items-center justify-center`}
-                    >
-                      <LiaTruckPickupSolid />
+                    <div className="flex flex-col items-center">
+                      <div
+                        className={`h-8 w-8 rounded-full ${
+                          order.orderStatus === "Delivered"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
+                        } text-white flex items-center justify-center`}
+                      >
+                        <LiaTruckPickupSolid />
+                      </div>
+                      <p
+                        className={`p-0 m-0 text-[10px] ${
+                          order.orderStatus === "Delivered"
+                            ? "text-black"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        Delivered
+                      </p>
                     </div>
-                    <p
-                      className={`p-0 m-0 text-[10px] ${
-                        order.orderStatus === "Delivered"
-                          ? "text-black"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      Delivered
-                    </p>
-                  </div>
-                </td>
-                <td className="p-2">{order.grandTotal} tk</td>
-              </tr>
+                  </td>
+                  <td className="p-2">{order.grandTotal} tk</td>
+                </tr>
+                <tr
+                  key={order.id}
+                  className="border-t border-gray-300 lg:hidden"
+                >
+                  <td className="p-2">
+                    <p className="font-bold">Amount: {order.grandTotal} Tk.</p>
+                    <p className="font-bold"> Order ID: {order.orderId}</p>
+                    <p className="text-[10px]">{order.address}</p>
+                    <p className="text-[10px]">{order.orderDate}</p>
+                  </td>
+                  <td className="p-2 flex items-center gap-2">
+                    <div className="flex flex-col items-center">
+                      <div
+                        className={`h-8 w-8 rounded-full ${
+                          order.orderStatus === "Pending" ||
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
+                        } text-white flex items-center justify-center`}
+                      >
+                        <FaClockRotateLeft />
+                      </div>
+                      <p
+                        className={`p-0 m-0 text-[10px] ${
+                          order.orderStatus === "Pending" ||
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "text-black"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        Pending
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                      <div
+                        className={`h-8 w-8 rounded-full ${
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
+                        } text-white flex items-center justify-center`}
+                      >
+                        <BsBoxSeam />
+                      </div>
+                      <p
+                        className={`p-0 m-0 text-[10px] ${
+                          order.orderStatus === "Processing" ||
+                          order.orderStatus === "Delivered"
+                            ? "text-black"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        Processing
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                      <div
+                        className={`h-8 w-8 rounded-full ${
+                          order.orderStatus === "Delivered"
+                            ? "bg-yellow-400"
+                            : "bg-gray-400"
+                        } text-white flex items-center justify-center`}
+                      >
+                        <LiaTruckPickupSolid />
+                      </div>
+                      <p
+                        className={`p-0 m-0 text-[10px] ${
+                          order.orderStatus === "Delivered"
+                            ? "text-black"
+                            : "text-gray-400"
+                        }`}
+                      >
+                        Delivered
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </>
             ))
           ) : (
             <tr>

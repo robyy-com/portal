@@ -37,6 +37,8 @@ export interface Product {
   discountRate: number;
   size: string;
   quantity: number;
+  ratingRate: number;
+  ratingCount: number;
   brandSlug: string;
   categorySlug: string;
   stockAvailable: boolean;
