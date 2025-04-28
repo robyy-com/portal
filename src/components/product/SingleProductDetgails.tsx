@@ -4,8 +4,7 @@ import Link from "next/link";
 import { FaHeart, FaStar } from "react-icons/fa";
 import robyy from "../../../public/images/ROBYYLogo.png";
 import WishlistButton from "../wishlist/WishlistButton";
-import { FaStarHalfStroke } from "react-icons/fa6";
-
+import { BiStar } from "react-icons/bi";
 function SingleProductDetgails(product: Product) {
   const {
     sku,
@@ -30,14 +29,14 @@ function SingleProductDetgails(product: Product) {
         {title}
       </h2>
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-4 ">
+        <div className={`flex items-center ${ratingRate > 0 && "gap-4"}`}>
           <p className=" text-regular font-bold text-primaryColor">
-            {ratingRate}
+            {ratingRate > 0 && ratingRate}
           </p>
           <div className="flex items-center gap-1 text-sm text-[18px] text-primaryColor">
             {[1, 2, 3, 4, 5].map((star) =>
               ratingRate === 0 || star > ratingRate ? (
-                <FaStarHalfStroke key={star} />
+                <BiStar key={star} />
               ) : (
                 <FaStar key={star} />
               )
@@ -55,8 +54,8 @@ function SingleProductDetgails(product: Product) {
           <WishlistButton product={product} label="Add to wishlist" />
         </Link>
       </div>
-      <div className=" flex justify-between items-center py-4 border-b-2 border-[#EAEAEA]">
-        <div className="flex items-baseline mb-1 space-x-2 font-roboto ">
+      <div className=" flex justify-between items-center py-3 border-b-2 border-[#EAEAEA]">
+        <div className="flex items-baseline space-x-2 font-roboto ">
           <p className="xl:text-4xl text-regular lg:text-xl text-primary font-semibold">
             TK {salesPrice}
           </p>
