@@ -4,7 +4,7 @@ export const apiUrl =
 // Fetch Products
 export const fetchProducts = async () => {
   const response = await fetch(`${apiUrl}/products`, {
-    cache: "no-cache",
+    next: { revalidate: 10 },
   });
   if (!response.ok) {
     throw new Error(`Error: ${response.statusText}`);

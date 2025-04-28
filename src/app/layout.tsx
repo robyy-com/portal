@@ -13,7 +13,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Add de
 
 export const metadata: Metadata = {
   title: "Robyy",
-  description: "Family Jewelry Collection",
+  description: "ROBYY - Luxury cosmetics, affordable prices",
 };
 
 export default function RootLayout({
