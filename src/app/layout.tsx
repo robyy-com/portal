@@ -3,13 +3,14 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopNavbar from "@/components/TopNavbar";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Bree_Serif } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 import Providers from "./providers";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Add desired font weights
+const bree_Serif = Bree_Serif({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Robyy",
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={bree_Serif.className}>
         <Providers>
           <ToastContainer />
           <div className=" sticky top-0 bg-white z-10 px-2.5 xl:px-0">
