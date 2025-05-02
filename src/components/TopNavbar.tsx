@@ -146,10 +146,13 @@ const TopNavbar = () => {
   };
 
   const handleLogout = () => {
+    dispatch(setCurrentUser(null));
+    Cookies.remove("mobileNo", { path: "/" });
     toast.success("Logout successfully");
     navigation.push("/");
-    dispatch(setCurrentUser(null));
-    Cookies.remove("mobileNo");
+    setTimeout(() => {
+      window.location.reload(); // ← this clears all cookie-based UI values
+    }, 100);
   };
   const handleRoute = () => {
     navigation.push("/account");

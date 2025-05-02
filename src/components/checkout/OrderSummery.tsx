@@ -33,7 +33,10 @@ function OrderSummery({
                   <div className=" flex gap-2 items-center">
                     <div className="relative">
                       <Image
-                        src="/images/Products iamge/product-13 1 (1).png"
+                        src={
+                          item.proImage ||
+                          "/images/Products iamge/product-13 1 (1).png"
+                        }
                         alt="order"
                         width={50}
                         height={50}
