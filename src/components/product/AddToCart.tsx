@@ -52,8 +52,8 @@ function AddToCart({ product }: { product: Product }) {
         disabled={product?.stockAvailable == false}
         className={`${
           product?.stockAvailable
-            ? "block px-4 py-2 border hover:bg-textColor  cursor-pointer hover:text-white transition-all border-[#000] text-[#000] text-sm font-medium rounded-md w-full"
-            : "opacity-50 cursor-not-allowed w-full px-4 py-2 border text-sm font-medium rounded-md   bg-gray-300 "
+            ? "block px-4 py-2 hover:bg-textColor border border-[#e0ceba]  cursor-pointer hover:text-white transition-all text-[#000] bg-[#f8efe6] text-sm font-medium rounded-md w-full"
+            : "opacity-50 cursor-not-allowed w-full px-4 py-2 border text-sm font-medium rounded-md bg-gray-300 "
         }`}
       >
         Add to Cart
