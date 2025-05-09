@@ -74,9 +74,12 @@ const Blogs = async () => {
                 >
                   {blogItem.postTitle}
                 </Link>
-                <p className=" mt-4 text-base md:text-lg text-gray-600">
-                  {truncateText(blogItem.postDetails, 100)}
-                </p>
+                {/* <p
+                  className=" mt-4 text-base md:text-lg text-gray-600"
+                  dangerouslySetInnerHTML={{
+                    __html: truncateText(blogItem.postDetails, 100),
+                  }}
+                ></p> */}
               </div>
             </Link>
           ))}

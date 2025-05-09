@@ -14,13 +14,14 @@ export const fetchProducts = async () => {
 
 // Fetch Single Product
 export const fetchSingleProducts = async (productSlug: string) => {
-  const response = await fetch(`${apiUrl}/product/${productSlug}`, {
-    cache: "no-cache",
-  });
-  if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+  try {
+    const response = await fetch(`${apiUrl}/product/${productSlug}`, {
+      cache: "no-cache",
+    });
+    return await response.json();
+  } catch (error: any) {
+    throw new Error(`Error: ${error.message}`);
   }
-  return await response.json();
 };
 
 // Fetch Categories
