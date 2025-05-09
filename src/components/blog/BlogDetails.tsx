@@ -38,9 +38,10 @@ function BlogDetails({ blog }: any) {
         </div>
 
         {/* Blog Content */}
-        <p className="text-base text-gray-800 leading-relaxed">
-          {blog.postDetails}
-        </p>
+        <p
+          className="text-base text-gray-800 leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: blog.postDetails }}
+        ></p>
 
         {/* Likes Count */}
         <div className="mt-6">

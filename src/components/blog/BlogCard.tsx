@@ -29,9 +29,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
             <span className="line-clamp-1">{blog.postTitle}</span>
           </Link>
         </h3>
-        <p className="my-3 text-base text-slate-400 line-clamp-3">
+        {/* <p className="my-3 text-base text-slate-400 line-clamp-3">
           {blog.postDetails}
-        </p>
+        </p> */}
 
         {/* Footer Section */}
         <div className="flex justify-between items-center">
@@ -47,11 +47,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
             />
             <div>
               <h5 className="text-slate-300 text-sm">
-                <Link href={`/author/${blog.postedBy}`}>
-                  <span className="hover:text-slate-300 transition-colors text-black font-semibold">
-                    {blog.postedBy}
-                  </span>
-                </Link>
+                <span className=" text-black font-semibold">
+                  {blog.postedBy}
+                </span>
               </h5>
               <span className="text-xs text-slate-400">
                 {blog.postDateTime}
