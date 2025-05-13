@@ -26,13 +26,13 @@ export async function generateMetadata(
   const { seoMeta } = singleProduct || {};
 
   return {
-    title: `Robyy Jewellery - ${seoMeta[0]?.title}`,
+    title: `${seoMeta[0]?.title}`,
     description:
       seoMeta[0]?.metaDescription || "Read our latest updates and insights.",
     keywords: seoMeta[0]?.keywords || "blog, article, updates",
 
     openGraph: {
-      title: `Robyy Jewellery - ${seoMeta[0]?.title}`,
+      title: `${seoMeta[0]?.title}`,
       description:
         seoMeta[0]?.metaDescription || "Read our latest updates and insights.",
       url: `https://www.robyy.com/product/${productSlug}`,
@@ -51,7 +51,7 @@ export async function generateMetadata(
 
     twitter: {
       card: "summary_large_image",
-      title: `Robyy Jewellery - ${seoMeta[0]?.title}`,
+      title: `${seoMeta[0]?.title}`,
       description:
         seoMeta[0]?.metaDescription || "Read our latest updates and insights.",
       images: [
