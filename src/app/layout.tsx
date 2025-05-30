@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 import Providers from "./providers";
+import Script from "next/script"; // ⬅️ Add this
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] }); // Add desired font weights
 const bree_Serif = Bree_Serif({ subsets: ["latin"], weight: ["400"] });
@@ -24,7 +25,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script id="gtm-head" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TFTPCJKW');
+          `}
+        </Script>
+      </head>
       <body className={bree_Serif.className}>
+        {/* GTM noscript fallback */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TFTPCJKW"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
         <Providers>
           <ToastContainer />
           <div className=" sticky top-0 bg-white z-10 px-2.5 xl:px-0">
