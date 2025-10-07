@@ -17,8 +17,8 @@ const NewArrivals = async () => {
         {newProducts &&
           newProducts?.length > 0 &&
           newProducts
-            .slice(0, 10)
-            .map((product: any) => (
+            ?.slice(0, 10)
+            ?.map((product: any) => (
               <ProductCard key={product?.Id} product={product} />
             ))}
       </div>

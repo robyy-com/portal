@@ -54,7 +54,7 @@ const Blogs = async () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-10">
         {blogs &&
           blogs.length > 0 &&
-          blogs.slice(0, 4).map((blogItem: any) => (
+          blogs?.slice(0, 4).map((blogItem: any) => (
             <Link
               href={`blog/${blogItem?.postSlug}`}
               key={blogItem.postTitle}

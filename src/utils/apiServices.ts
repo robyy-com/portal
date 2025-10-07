@@ -7,7 +7,7 @@ export const fetchProducts = async () => {
     next: { revalidate: 10 },
   });
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -26,13 +26,15 @@ export const fetchSingleProducts = async (productSlug: string) => {
 
 // Fetch Categories
 export const fetchCategories = async () => {
-  const response = await fetch(`${apiUrl}/categories`, {
-    cache: "no-cache",
-  });
-  if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+  try {
+    const response = await fetch(`${apiUrl}/categories`, {
+      cache: "no-cache",
+    });
+    return await response.json();
+  } catch (error: any) {
+    console.error("Error fetching categories:", error);
+    return []; // return fallback
   }
-  return await response.json();
 };
 
 // Fetch Products By Category
@@ -41,7 +43,7 @@ export const productsByCategory = async (categorySlug: string) => {
     cache: "no-cache",
   });
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -51,7 +53,7 @@ export const productsByBrand = async (brandSlug: string) => {
     cache: "no-cache",
   });
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -67,7 +69,7 @@ export const fetchCarts = async (data: any) => {
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
 
   return await response.json();
@@ -79,7 +81,7 @@ export const fatchTopBrand = async () => {
     cache: "no-cache",
   });
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -101,7 +103,7 @@ export const fetchBlogs = async () => {
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -111,7 +113,7 @@ export const fetchBlogsCategory = async () => {
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -144,7 +146,7 @@ export const fetchNewArrivalProducts = async () => {
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
@@ -155,7 +157,7 @@ export const fetchBestDeals = async () => {
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.statusText}`);
+    return [];
   }
   return await response.json();
 };
