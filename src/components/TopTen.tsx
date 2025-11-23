@@ -53,7 +53,7 @@ const TopTen = () => {
       },
     ],
   };
-  const [data, setData] = useState<Product[] | null>(null);
+  const [data, setData] = useState<Product[] | null>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -79,6 +79,7 @@ const TopTen = () => {
           <div className=" xl:col-span-10">
             <SliderComponent {...settings} className="top-ten-slide">
               {data &&
+                data?.length > 0 &&
                 data?.slice(0, 10)?.map((product: Product, index: number) => (
                   <div className=" px-3" key={product.Id}>
                     <ProductCard product={product} />

@@ -7,7 +7,7 @@ import Button from "./ui/Button";
 
 const AllProducts = async () => {
   const products = await fetchProducts();
-  const data: Product[] = products.slice(0, 10);
+  const data: Product[] = products?.slice(0, 10) || [];
 
   return (
     <section className="section-gap">

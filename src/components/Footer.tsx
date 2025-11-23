@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Footer = async () => {
   const categories: Category[] = await fetchCategories(); // Ensure it's an array
-  const fiveCategory = categories.slice(0, 5);
+  const fiveCategory = categories.slice(0, 5) || [];
   return (
     <div className="bg-[#000000] text-white ">
       <div className="container mx-auto px-3">

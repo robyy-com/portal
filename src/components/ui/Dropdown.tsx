@@ -11,6 +11,7 @@ export default function Dropdown({ searchproducts, onSelect }: props) {
     <div className="h-72 bg-white w-full absolute left-0 top-14 p-4 shadow-lg rounded overflow-y-auto dropdown-container transition-all duration-700 ease-in-out">
       <ul>
         {searchproducts &&
+          searchproducts?.length > 0 &&
           searchproducts?.slice(0, 10)?.map((product: any) => (
             <Link
               key={product.Id}
