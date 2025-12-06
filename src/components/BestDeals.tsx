@@ -6,7 +6,8 @@ import { fetchBestDeals } from "@/utils/apiServices";
 import { brandNoImage, productDetailNoImg } from "../../public";
 import Link from "next/link";
 const BestDeals = async () => {
-  const bestDeals = await fetchBestDeals();
+  const deals = await fetchBestDeals();
+  const bestDeals = Array.isArray(deals) ? deals : [];
 
   return (
     <section className="my-7 lg:section-gap">
@@ -14,8 +15,7 @@ const BestDeals = async () => {
         Best Deals
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 2xl:grid-cols-5 gap-x-4 gap-y-8 px-2 lg:px-0 2xl:gap-10  ">
-        {bestDeals &&
-          bestDeals?.length > 0 &&
+        {Array.isArray(bestDeals) &&
           bestDeals?.map((item: any, index: number) => (
             <Link href={`/product/${item.productSlug}`} key={index}>
               <div className="flex mt-2 xl:mt-0 flex-col items-center xl:flex-row gap-4 bg-white rounded-lg overflow-hidden">

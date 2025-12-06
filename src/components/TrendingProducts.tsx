@@ -63,7 +63,7 @@ const TrendingProducts = () => {
     const fetchData = async () => {
       try {
         const products = await fetchProducts();
-        setData(products);
+        setData(Array.isArray(products) ? products : []);
       } catch (err: any) {
         console.log(err.message);
       } finally {
@@ -83,8 +83,7 @@ const TrendingProducts = () => {
         />
 
         <SliderComponent {...settings} className="tending-slide">
-          {data &&
-            data?.length > 0 &&
+          {Array.isArray(data) &&
             data?.slice(0, 10)?.map((product: Product, index: number) => (
               <div className=" px-3" key={product.Id}>
                 <ProductCard product={product} />
