@@ -22,6 +22,7 @@ const Categories = () => {
         setData(categories);
       } catch (err: any) {
         console.log(err.message);
+        setData([]);
       } finally {
         //
       }
@@ -88,8 +89,7 @@ const Categories = () => {
       />
 
       <SliderComponent {...settings} className="category-slide">
-        {data &&
-          data?.length > 0 &&
+        {Array.isArray(data) &&
           data?.map((item: Category, index: number) => (
             <Link href={`/category/${item.categorySlug}`} key={index}>
               <div key={index} className="px-3">
