@@ -4,7 +4,7 @@ export const apiUrl =
 // Fetch Products
 export const fetchProducts = async () => {
   const response = await fetch(`${apiUrl}/products`, {
-    next: { revalidate: 10 },
+    cache: "no-cache",
   });
   if (!response.ok) {
     return [];
