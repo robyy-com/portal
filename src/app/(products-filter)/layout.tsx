@@ -5,6 +5,7 @@ import React, { ReactNode, use, useState } from "react";
 import { FaFilter } from "react-icons/fa";
 import SidebarFilter from "./SidebarFilter";
 import { usePathname } from "next/navigation";
+import { ToastContainer } from "react-toastify";
 
 export default function ProductLayout({ children }: { children: ReactNode }) {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -13,6 +14,8 @@ export default function ProductLayout({ children }: { children: ReactNode }) {
     <div className="container mx-auto lg:mt-6 mt-0">
       <div className="grid grid-cols-12 gap-6">
         {/* Sidebar */}
+
+        <ToastContainer />
 
         <SidebarFilter openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
         {/* Main Content */}
