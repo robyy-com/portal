@@ -16,7 +16,7 @@
     "axios": "^1.7.2",
     "framer-motion": "^11.0.24",
     "js-cookie": "^3.0.5",
-    "next": "^14.2.3",
+    "next": "14.2.35",
     "react": "^18",
     "react-animated-numbers": "^0.18.0",
     "react-countup": "^6.5.2",
