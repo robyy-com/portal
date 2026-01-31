@@ -92,34 +92,6 @@ function OrderSummery({
           </div>
         </div>
       </div>
-      <div className="mb-4">
-        {isOtpSent ? (
-          <div>
-            <p className="m-0 p-0 text-green-500">
-              OTP has been sent to {number}{" "}
-            </p>
-
-            <div className="mb-4">
-              <label
-                className="block  text-regular text-textColor font-normal mb-2"
-                htmlFor="otp"
-              >
-                Enter OTP <span className="text-red-500">*</span>
-              </label>
-              <input
-                id="otp"
-                type="text"
-                value={formOtp}
-                onChange={(e) => setFormOtp?.(e.target.value)}
-                className="w-full p-2 border  rounded-md"
-                required
-              />
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
     </div>
   );
 }

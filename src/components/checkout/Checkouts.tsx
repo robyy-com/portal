@@ -39,51 +39,49 @@ function Checkouts({ setShow, setOpenCheckout }: props) {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const handleOtpSubmit = async () => {
-    if (!fullName || !number || !address) {
-      toast.warn("Please enter all required fields");
-      return;
-    }
-    setOtpSendLoading(true);
-    let obj: any = {};
-    obj.partyName = fullName;
-    obj.mobileNo = number;
-    obj.couponNo = couponNo;
-    obj.address = address;
-    obj.orderNote = note;
-    obj.api_key = api_key;
-    obj.orderChannel = "ECOM";
-    obj.tokenNo = getTokenNo();
-    obj.subTotal = totalPrice;
-    obj.grandTotal = totalPrice + shipRate - discount;
-    obj.shippingCharge = selectedMethod;
-    obj.paymentMethod = "COD";
-    obj.discountAmt = discountAmt ? discountAmt : 0;
-    obj.otp = "-";
-    obj.otpSubmit = "False";
+  // const handleOtpSubmit = async () => {
+  //   if (!fullName || !number || !address) {
+  //     toast.warn("Please enter all required fields");
+  //     return;
+  //   }
+  //   setOtpSendLoading(true);
+  //   let obj: any = {};
+  //   obj.partyName = fullName;
+  //   obj.mobileNo = number;
+  //   obj.couponNo = couponNo;
+  //   obj.address = address;
+  //   obj.orderNote = note;
+  //   obj.api_key = api_key;
+  //   obj.orderChannel = "ECOM";
+  //   obj.tokenNo = getTokenNo();
+  //   obj.subTotal = totalPrice;
+  //   obj.grandTotal = totalPrice + shipRate - discount;
+  //   obj.shippingCharge = selectedMethod;
+  //   obj.paymentMethod = "COD";
+  //   obj.discountAmt = discountAmt ? discountAmt : 0;
+  //   obj.otp = "-";
+  //   obj.otpSubmit = "False";
 
-    const res: any = await addCheckout(obj);
-    if (res?.data[0]?.otpSent === true) {
-      setIsOtpSent(true);
-      setOtpSendLoading(false);
-      toast.success("OTP sent successfully");
-    } else {
-      toast.error(res?.statusMsg);
-      setTimeout(() => {
-        setOtpSendLoading(false);
-      }, 2000);
-    }
-  };
+  //   const res: any = await addCheckout(obj);
+  //   if (res?.data[0]?.otpSent === true) {
+  //     setIsOtpSent(true);
+  //     setOtpSendLoading(false);
+  //     toast.success("OTP sent successfully");
+  //   } else {
+  //     toast.error(res?.statusMsg);
+  //     setTimeout(() => {
+  //       setOtpSendLoading(false);
+  //     }, 2000);
+  //   }
+  // };
 
   const handleCheckout = async () => {
     if (!fullName || !number || !address) {
       toast.warn("Please enter all required fields");
       return;
     }
-
+    setOtpVerifyLoading(true);
     try {
-      setOtpVerifyLoading(true);
-
       const obj = {
         partyName: fullName,
         mobileNo: number,
@@ -98,34 +96,29 @@ function Checkouts({ setShow, setOpenCheckout }: props) {
         shippingCharge: selectedMethod,
         paymentMethod: "COD",
         discountAmt: discountAmt || 0,
-        otp: formOtp,
-        otpSubmit: "True",
+        otp: "-",
+        otpSubmit: "false",
       };
 
       const res: any = await addCheckout(obj);
-      const order = res?.data[0]?.orderNo || "";
+      // const orderCreated = true;
+      const orderCreated = res?.data[0]?.orderCreated;
 
-      if (order) {
-        setOrderNo(order);
+      if (orderCreated) {
+        setOrderNo(res?.data[0]?.orderNo);
         clearTokenNo();
         dispatch(deleteAll());
         setCartsShow(false);
-        setShow(false);
-        setOtpVerifyLoading(false);
 
         dispatch(
           setCurrentUser({
             partyName: fullName,
             mobileNo: number,
             address: address,
-          })
+          }),
         );
 
         Cookies.set("mobileNo", number, { expires: 7 });
-
-        setTimeout(() => {
-          router.push("/account");
-        }, 500);
 
         toast.success(
           <div>
@@ -133,28 +126,29 @@ function Checkouts({ setShow, setOpenCheckout }: props) {
               Order has been placed successfully!
             </p>
             <p className="font-bold text-lg">
-              Your order number is <strong>{order}</strong>
+              Your order number is <strong>{res?.data[0]?.orderNo}</strong>
             </p>
           </div>,
           {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 8000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
-          }
+          },
         );
-      } else {
-        // Fallback message in case `statusMsg` is undefined or empty
-        toast.error(
-          res?.statusMsg || "Failed to place order. Please try again."
-        );
+
         setTimeout(() => {
           setOtpVerifyLoading(false);
+          setShow(false);
+          router.push("/account");
         }, 2000);
+      } else {
+        // Fallback message in case `statusMsg` is undefined or empty
+        toast.error("Failed to place order. Please try again.");
       }
     } catch (error) {
       console.error("Checkout error:", error);
@@ -168,57 +162,46 @@ function Checkouts({ setShow, setOpenCheckout }: props) {
   return (
     <>
       <ToastContainer />
-      {!orderNo && (
-        <CheckoutModal setShow={setOpenCheckout}>
-          <div className="container bg-white mx-auto rounded-md  ">
-            <div className="block lg:grid grid-cols-2 gap-12 ">
-              <CheckoutForm
-                setNumber={setNumber}
-                setFullName={setFullName}
-                setCouponNo={setCouponNo}
-                setAddress={setAddress}
-                setSelectedMethod={setSelectedMethod}
-                number={number}
-                fullName={fullName}
-                couponNo={couponNo}
+      <CheckoutModal setShow={setOpenCheckout}>
+        <div className="container bg-white mx-auto rounded-md  ">
+          <div className="block lg:grid grid-cols-2 gap-12 ">
+            <CheckoutForm
+              setNumber={setNumber}
+              setFullName={setFullName}
+              setCouponNo={setCouponNo}
+              setAddress={setAddress}
+              setSelectedMethod={setSelectedMethod}
+              number={number}
+              fullName={fullName}
+              couponNo={couponNo}
+              discountAmt={discountAmt}
+              address={address}
+              selectedMethod={selectedMethod}
+              setDiscountAmt={setDiscountAmt}
+              setNote={setNote}
+              note={note}
+            />
+
+            <div className=" border border-borderColor bg-white rounded-md">
+              <OrderSummery
                 discountAmt={discountAmt}
-                address={address}
-                selectedMethod={selectedMethod}
-                setDiscountAmt={setDiscountAmt}
-                setNote={setNote}
-                note={note}
+                isOtpSent={isOtpSent}
+                setFormOtp={setFormOtp}
+                formOtp={formOtp}
+                number={number}
               />
 
-              <div className=" border border-borderColor bg-white rounded-md">
-                <OrderSummery
-                  discountAmt={discountAmt}
-                  isOtpSent={isOtpSent}
-                  setFormOtp={setFormOtp}
-                  formOtp={formOtp}
-                  number={number}
-                />
-                {isOtpSent ? (
-                  <Button
-                    title="Place Order"
-                    onClick={handleCheckout}
-                    className="w-full"
-                    loading={otpVerifyLoading}
-                    disabled={otpVerifyLoading}
-                  />
-                ) : (
-                  <Button
-                    title="Checkout"
-                    onClick={handleOtpSubmit}
-                    className="w-full"
-                    loading={otpSendLoading}
-                    disabled={otpSendLoading}
-                  />
-                )}
-              </div>
+              <Button
+                title="Place Order"
+                onClick={handleCheckout}
+                className="w-full"
+                loading={otpVerifyLoading}
+                disabled={otpVerifyLoading}
+              />
             </div>
           </div>
-        </CheckoutModal>
-      )}
+        </div>
+      </CheckoutModal>
       {/* <CheckoutModal setShow={setOpenOtpModal}>
         <div className="w-full h-full flex justify-center items-center">
           test
